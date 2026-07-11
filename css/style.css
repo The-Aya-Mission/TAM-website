@@ -209,6 +209,24 @@ section.band { padding: 70px 0; }
   filter: drop-shadow(0 3px 5px rgba(0,0,0,.35));
   opacity: .96;
 }
+/* every note torn differently, like the deck */
+.grid > .card:nth-child(3n+2) { border-image-source: url("../assets/paper-torn-2.webp"); transform: rotate(.6deg); }
+.grid > .card:nth-child(3n+2)::before {
+  transform: translateX(-54%) rotate(1.8deg) scaleX(-1);
+  width: 178px; height: 60px;
+}
+.grid > .card:nth-child(3n) { border-image-source: url("../assets/paper-torn-3.webp"); transform: rotate(-.5deg); }
+.grid > .card:nth-child(3n)::before {
+  transform: translateX(-42%) rotate(-1deg);
+  width: 256px; height: 64px;
+}
+.grid > .card:nth-child(3n+1) { transform: rotate(.3deg); }
+/* hand-done tape variety on photos & headshots */
+.gallery .photo-taped:nth-child(3n)::before { transform: translateX(-56%) rotate(2.2deg) scaleX(-1); width: 148px; height: 46px; }
+.gallery .photo-taped:nth-child(3n+2)::before { transform: translateX(-44%) rotate(-1.6deg); width: 204px; height: 58px; }
+.member:nth-of-type(even) .headshot::before { transform: translateX(-46%) rotate(-2.2deg) scaleX(-1); width: 142px; height: 44px; }
+/* alternate paper on the big strips too */
+section.band:nth-of-type(even) .torn { border-image-source: url("../assets/paper-torn-2.webp"); }
 .card h3 { font-size: 1.3rem; margin-bottom: 10px; letter-spacing: .04em; }
 .card .sym { color: var(--gold-dark); font-size: 1.5rem; line-height: 1; margin-bottom: 12px; }
 .card p { color: var(--ink-soft); font-size: 1.02rem; }
@@ -423,37 +441,4 @@ footer .fine {
   }
   .grid { gap: 34px 20px; }
   .hero { padding: 56px 0 48px; }
-  .hero .logo-panel { border-width: 24px 14px; border-image-width: 24px 16px 24px 11px; padding: 12px 14px 8px; }
-  .tape { font-size: clamp(1.15rem, 5.6vw, 1.7rem); padding: .45em 1.1em; }
-}
-
-/* ---------- header layout: brand | nav | donate (desktop) ---------- */
-.nav-bar .brand { order: 0; }
-nav.main { order: 2; }
-.nav-bar > .btn-donate { order: 3; margin-left: 12px; }
-label.nav-toggle-btn { order: 4; }
-
-/* ---------- responsive nav: hamburger + Be the Bridge only ---------- */
-@media (max-width: 900px) {
-  header.site { position: static; }
-  .nav-bar { gap: 10px; }
-  .brand img { height: 46px; }
-  .brand span { font-size: .92rem; letter-spacing: .08em; }
-  label.nav-toggle-btn {
-    display: block; color: var(--gold);
-    font-size: 1.9rem; line-height: 1; cursor: pointer; user-select: none;
-    padding: 4px 6px;
-  }
-  .nav-bar > .btn-donate {
-    margin-left: auto;
-    padding: 8px 14px !important; font-size: .78rem;
-  }
-  nav.main {
-    display: none; width: 100%; order: 5;
-    flex-direction: column; align-items: flex-start;
-    padding: 12px 0 6px;
-  }
-  #nav-toggle:checked ~ nav.main { display: flex; }
-  nav.main a { font-size: .95rem; padding: 10px 8px; }
-  nav.main .group { width: 100%; }
-  nav.main .group > span { color: var(--g
+  .hero .logo-panel { border-width: 24px 14px; border-image-width: 24px 16px 24px 11px; padding:

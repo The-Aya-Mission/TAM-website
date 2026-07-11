@@ -129,6 +129,8 @@ label.nav-toggle-btn { display: none; }
 /* ---------- torn paper panels (real deck paper) ---------- */
 .torn {
   position: relative;
+  max-width: calc(var(--max) + 80px);
+  margin-left: auto; margin-right: auto;
   border-style: solid;
   border-width: 36px 18px;
   border-image: url("../assets/paper-torn.webp") 160 110 160 70 fill / 36px 22px 36px 16px stretch;
@@ -454,5 +456,4 @@ label.nav-toggle-btn { order: 4; }
   nav.main .group { width: 100%; }
   nav.main .group > span { color: var(--gold); font-size: .8rem; padding: 10px 8px 2px; }
   nav.main .group .sub {
-    display: block; position: static; border: 0; box-shadow: none;
-    background: transparent; paddi
+    display: block; po

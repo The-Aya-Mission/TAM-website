@@ -36,6 +36,13 @@ body::before {
   content: ""; position: fixed; inset: 0; z-index: -1;
   background: var(--green) url("../assets/bg-green.jpg") center / cover no-repeat;
 }
+/* phones: repeat a native-resolution tile instead of stretching (stays crisp at any DPR) */
+@media (max-width: 900px) {
+  body::before {
+    background: var(--green) url("../assets/bg-green-tile.jpg") repeat;
+    background-size: 480px 480px;
+  }
+}
 
 h1, h2, h3, h4 { font-family: 'Marcellus', serif; font-weight: 400; line-height: 1.2; }
 
@@ -377,9 +384,4 @@ footer .fine {
 }
 .stat-band p { max-width: 780px; margin: 16px auto 0; color: #f2f0e6; }
 
-/* ---------- section tiles ---------- */
-.tiles { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); margin-top: 40px; }
-.tile {
-  display: block; text-decoration: none;
-  background: var(--green-deep); color: var(--paper);
-  bo
+/* ---------- s

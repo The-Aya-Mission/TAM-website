@@ -123,7 +123,7 @@ label.nav-toggle-btn { display: none; }
   filter: drop-shadow(0 3px 12px rgba(0,0,0,.35));
 }
 .tape.small {
-  font-size: 1.05rem; letter-spacing: .12em; transform: rotate(.5deg);
+  font-size: clamp(1.1rem, 1.8vw, 1.45rem); letter-spacing: .1em; transform: rotate(.5deg);
   background-image: url("../assets/tape-small.svg");
   padding: .5em 1.6em;
 }
@@ -244,6 +244,10 @@ section.band:nth-of-type(even) .torn { border-image-source: url("../assets/paper
 .prose h3 { font-size: 1.35rem; margin: 30px 0 10px; letter-spacing: .04em; }
 .prose p { margin-bottom: 18px; color: var(--ink-soft); max-width: 72ch; }
 .prose .center p, .prose.center p { margin-left: auto; margin-right: auto; }
+.torn-inner > :last-child, .torn-inner .prose > :last-child { margin-bottom: 0; }
+/* lead paragraph on paper panels */
+.prose p.lead { font-size: clamp(1.2rem, 2vw, 1.5rem); line-height: 1.65; color: var(--ink); }
+.prose p.fine { font-size: .95rem; color: #6f6c5d; }
 .prose p strong { color: var(--ink); }
 .prose ul { margin: 0 0 16px 22px; color: var(--ink-soft); }
 .prose li { margin-bottom: 8px; }
@@ -433,12 +437,4 @@ footer .fine {
     border-width: 34px 13px;
     border-image-width: 34px 17px 34px 12px;
   }
-  .torn-inner { padding: 20px 10px; }
-  .card {
-    border-width: 32px 15px;
-    border-image-width: 32px 18px 32px 13px;
-    padding: 10px 6px 8px;
-  }
-  .grid { gap: 34px 20px; }
-  .hero { padding: 56px 0 48px; }
-  .hero .logo-panel { border-width: 24px 14px; border-image-width: 24px 16px 24px 11px; padding:
+  .torn-inner { padding

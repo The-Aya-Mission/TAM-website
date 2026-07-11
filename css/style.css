@@ -505,3 +505,28 @@ label.nav-toggle-btn { order: 4; }
     background: transparent; padding: 0 0 0 16px; min-width: 0;
   }
 }
+
+/* ---------- horizontal episode carousel ---------- */
+.carousel-wrap { max-width: calc(var(--max) + 80px); margin: 0 auto; padding: 0 18px; }
+.carousel {
+  display: flex; gap: 30px;
+  overflow-x: auto; overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 100px 12px 40px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--gold) rgba(0,0,0,.25);
+}
+.carousel::-webkit-scrollbar { height: 8px; }
+.carousel::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 4px; }
+.carousel::-webkit-scrollbar-track { background: rgba(0,0,0,.25); border-radius: 4px; }
+.carousel > .card {
+  flex: 0 0 min(380px, 80vw);
+  scroll-snap-align: center;
+}
+.carousel > .card:nth-child(3n+2) { border-image-source: url("../assets/paper-torn-2.webp"); transform: rotate(.6deg); }
+.carousel > .card:nth-child(3n) { border-image-source: url("../assets/paper-torn-3.webp"); transform: rotate(-.5deg); }
+.carousel .cover { width: 132px; margin-bottom: 14px; box-shadow: 0 4px 12px rgba(0,0,0,.3); }
+.carousel h3 { font-size: 1.3rem; margin-bottom: 8px; }
+.carousel p { color: var(--ink-soft); font-size: .98rem; }
+.carousel .btn { margin-top: 10px; }

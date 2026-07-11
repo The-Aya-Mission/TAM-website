@@ -96,6 +96,8 @@ nav.main .group:hover .sub, nav.main .group:focus-within .sub { display: block; 
 nav.main .sub a { display: block; padding: 9px 18px; }
 .btn-donate {
   color: var(--green-deep) !important;
+  text-decoration: none; font-weight: 700;
+  font-size: .85rem; letter-spacing: .06em; text-transform: uppercase;
   padding: 10px 20px !important; border-radius: 3px;
   background-image: url("../assets/tape-small.svg");
   background-size: 100% 100%; background-repeat: no-repeat;
@@ -454,6 +456,4 @@ label.nav-toggle-btn { order: 4; }
   #nav-toggle:checked ~ nav.main { display: flex; }
   nav.main a { font-size: .95rem; padding: 10px 8px; }
   nav.main .group { width: 100%; }
-  nav.main .group > span { color: var(--gold); font-size: .8rem; padding: 10px 8px 2px; }
-  nav.main .group .sub {
-    display: block; po
+  nav.main .group > spa

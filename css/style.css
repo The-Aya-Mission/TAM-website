@@ -190,11 +190,12 @@ section.band { padding: 70px 0; }
   filter: drop-shadow(0 5px 16px rgba(0,0,0,.4));
 }
 .card::before {
-  content: ""; position: absolute; top: -44px; left: 50%;
-  width: 190px; height: 52px; transform: translateX(-50%) rotate(-1.2deg);
+  content: ""; position: absolute; top: -56px; left: 50%;
+  width: 230px; height: 72px; transform: translateX(-50%) rotate(-2deg);
   background-image: url("../assets/tape-small.svg");
   background-size: 100% 100%;
-  opacity: .97;
+  filter: drop-shadow(0 3px 5px rgba(0,0,0,.35));
+  opacity: .96;
 }
 .card h3 { font-size: 1.3rem; margin-bottom: 10px; letter-spacing: .04em; }
 .card .sym { color: var(--gold-dark); font-size: 1.5rem; line-height: 1; margin-bottom: 12px; }
@@ -234,10 +235,12 @@ section.band { padding: 70px 0; }
   position: relative;
 }
 .member .headshot::before {
-  content: ""; position: absolute; top: -22px; left: 50%;
-  width: 130px; height: 38px; transform: translateX(-50%) rotate(1deg);
+  content: ""; position: absolute; top: -28px; left: 50%;
+  width: 160px; height: 50px; transform: translateX(-50%) rotate(2deg);
   background-image: url("../assets/tape-small.svg");
   background-size: 100% 100%;
+  filter: drop-shadow(0 3px 5px rgba(0,0,0,.35));
+  opacity: .96;
 }
 .member .headshot img { width: 100%; display: block; }
 .member h3 { font-size: 1.45rem; letter-spacing: .05em; text-transform: uppercase; }
@@ -257,9 +260,11 @@ section.band { padding: 70px 0; }
   position: relative; max-width: 100%;
 }
 .photo-taped::before {
-  content: ""; position: absolute; top: -22px; left: 50%;
-  width: 150px; height: 42px; transform: translateX(-50%) rotate(1.4deg);
+  content: ""; position: absolute; top: -28px; left: 50%;
+  width: 180px; height: 54px; transform: translateX(-50%) rotate(-2.4deg);
   background-image: url("../assets/tape-small.svg"); background-size: 100% 100%;
+  filter: drop-shadow(0 3px 5px rgba(0,0,0,.35));
+  opacity: .96;
   z-index: 1;
 }
 .photo-taped img { display: block; max-width: 100%; }
@@ -377,7 +382,4 @@ footer .fine {
   display: block; text-decoration: none;
   background: var(--green-deep); color: var(--paper);
   border: 1px solid rgba(217,183,119,.35); border-radius: 6px;
-  padding: 30px 26px; transition: transform .15s ease, border-color .15s ease;
-}
-.tile:hover { transform: translateY(-4px); border-color: var(--gold); }
-.tile h3 { color: var(--gold); font-size: 1.3rem; letter-spac
+  padding: 30px 26px; transition:

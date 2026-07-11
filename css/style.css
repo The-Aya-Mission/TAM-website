@@ -146,11 +146,11 @@ section.band { padding: 70px 0; }
 .hero { padding: 90px 0 70px; text-align: center; color: var(--paper); }
 .hero .wrap { display: flex; flex-direction: column; align-items: center; gap: 26px; }
 .hero .logo-panel {
-  padding: 16px 22px 10px;
+  padding: 10px 14px 4px;
   transform: rotate(-.8deg);
   border-style: solid;
-  border-width: 30px 18px;
-  border-image: url("../assets/paper-torn.webp") 160 110 160 70 fill / 30px 20px 30px 14px stretch;
+  border-width: 46px 28px;
+  border-image: url("../assets/paper-torn.webp") 160 110 160 70 fill / 46px 32px 46px 24px stretch;
   filter: drop-shadow(0 10px 30px rgba(0,0,0,.5));
 }
 .hero img.hero-logo { width: min(260px, 55vw); }
@@ -194,11 +194,11 @@ section.band { padding: 70px 0; }
 
 .card {
   color: var(--ink);
-  padding: 18px 14px 16px;
+  padding: 14px 10px 12px;
   position: relative;
   border-style: solid;
-  border-width: 28px 16px;
-  border-image: url("../assets/paper-torn.webp") 160 110 160 70 fill / 28px 18px 28px 13px stretch;
+  border-width: 42px 24px;
+  border-image: url("../assets/paper-torn.webp") 160 110 160 70 fill / 42px 28px 42px 21px stretch;
   filter: drop-shadow(0 5px 16px rgba(0,0,0,.4));
 }
 .card::before {
@@ -412,14 +412,14 @@ footer .fine {
   .wrap { padding: 0 14px; }
   section.band { padding: 44px 0; }
   .torn {
-    border-width: 26px 10px;
-    border-image-width: 26px 13px 26px 9px;
+    border-width: 34px 13px;
+    border-image-width: 34px 17px 34px 12px;
   }
-  .torn-inner { padding: 22px 12px; }
+  .torn-inner { padding: 20px 10px; }
   .card {
-    border-width: 24px 12px;
-    border-image-width: 24px 14px 24px 10px;
-    padding: 14px 8px 12px;
+    border-width: 32px 15px;
+    border-image-width: 32px 18px 32px 13px;
+    padding: 10px 6px 8px;
   }
   .grid { gap: 34px 20px; }
   .hero { padding: 56px 0 48px; }
@@ -456,4 +456,4 @@ label.nav-toggle-btn { order: 4; }
   #nav-toggle:checked ~ nav.main { display: flex; }
   nav.main a { font-size: .95rem; padding: 10px 8px; }
   nav.main .group { width: 100%; }
-  nav.main .group > span { color: var(--
+  nav.main .group > span { color: var(--g

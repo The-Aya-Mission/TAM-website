@@ -509,24 +509,28 @@ label.nav-toggle-btn { order: 4; }
 /* ---------- horizontal episode carousel ---------- */
 .carousel-wrap { max-width: calc(var(--max) + 80px); margin: 0 auto; padding: 0 18px; }
 .carousel {
-  display: flex; gap: 30px;
+  display: flex; gap: 22px; align-items: stretch;
   overflow-x: auto; overscroll-behavior-x: contain;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
-  padding: 100px 12px 40px;
+  padding: 62px 10px 24px;
   scrollbar-width: thin;
   scrollbar-color: var(--gold) rgba(0,0,0,.25);
 }
-.carousel::-webkit-scrollbar { height: 8px; }
+.carousel::-webkit-scrollbar { height: 7px; }
 .carousel::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 4px; }
 .carousel::-webkit-scrollbar-track { background: rgba(0,0,0,.25); border-radius: 4px; }
 .carousel > .card {
-  flex: 0 0 min(380px, 80vw);
+  flex: 0 0 min(270px, 72vw);
   scroll-snap-align: center;
+  border-width: 28px 16px;
+  border-image-width: 28px 18px 28px 14px;
+  padding: 6px 4px;
 }
+.carousel > .card::before { width: 140px; height: 46px; top: -48px; }
 .carousel > .card:nth-child(3n+2) { border-image-source: url("../assets/paper-torn-2.webp"); transform: rotate(.6deg); }
 .carousel > .card:nth-child(3n) { border-image-source: url("../assets/paper-torn-3.webp"); transform: rotate(-.5deg); }
-.carousel .cover { width: 132px; margin-bottom: 14px; box-shadow: 0 4px 12px rgba(0,0,0,.3); }
-.carousel h3 { font-size: 1.3rem; margin-bottom: 8px; }
-.carousel p { color: var(--ink-soft); font-size: .98rem; }
-.carousel .btn { margin-top: 10px; }
+.carousel .cover { width: 96px; margin-bottom: 10px; box-shadow: 0 3px 10px rgba(0,0,0,.3); }
+.carousel h3 { font-size: 1.1rem; margin-bottom: 6px; }
+.carousel p { color: var(--ink-soft); font-size: .88rem; line-height: 1.55; }
+.carousel .btn { margin-top: 10px; padding: 10px 18px; font-size: .76rem; }

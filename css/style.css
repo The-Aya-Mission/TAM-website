@@ -30,10 +30,11 @@ body {
   line-height: 1.75;
   color: var(--ink);
   background-color: var(--green);
-  background-image: url("../assets/bg-green.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
+}
+/* green canvas pinned to the viewport (avoids iOS fixed-background blur) */
+body::before {
+  content: ""; position: fixed; inset: 0; z-index: -1;
+  background: var(--green) url("../assets/bg-green.jpg") center / cover no-repeat;
 }
 
 h1, h2, h3, h4 { font-family: 'Marcellus', serif; font-weight: 400; line-height: 1.2; }
@@ -381,5 +382,4 @@ footer .fine {
 .tile {
   display: block; text-decoration: none;
   background: var(--green-deep); color: var(--paper);
-  border: 1px solid rgba(217,183,119,.35); border-radius: 6px;
-  padding: 30px 26px; transition:
+  bo

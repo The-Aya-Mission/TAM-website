@@ -222,7 +222,7 @@ section.band { padding: 70px 0; }
   filter: drop-shadow(0 5px 16px rgba(0,0,0,.4));
 }
 .card::before {
-  content: ""; position: absolute; top: -56px; left: 50%;
+  content: ""; position: absolute; top: -84px; left: 50%;
   width: 230px; height: 72px; transform: translateX(-50%) rotate(-2deg);
   background-image: url("../assets/tape-small.svg");
   background-size: 100% 100%;

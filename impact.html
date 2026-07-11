@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Impact — The Aya Mission</title>
+<meta name="description" content="Measurable mental health outcomes, veteran stories, and the impact of The Aya Mission's work.">
+<link rel="icon" type="image/png" href="assets/logo-small.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- paint/tear SVG filters -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="paint-rough" x="-15%" y="-40%" width="130%" height="180%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035 0.12" numOctaves="4" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="12" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="edge-rough" x="-10%" y="-60%" width="120%" height="220%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.02 0.07" numOctaves="3" seed="3" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="9" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+</svg>
+
+<div class="crisis">In crisis? Veterans Crisis Line — dial <a href="tel:988">988</a> then press 1, or text <a href="sms:838255">838255</a>. Free, confidential, 24/7.</div>
+
+<header class="site">
+  <div class="nav-bar">
+    <a class="brand" href="index.html"><img src="assets/logo-small.png" alt="The Aya Mission logo"><span>The Aya Mission</span></a>
+    <input type="checkbox" id="nav-toggle">
+    <label class="nav-toggle-btn" for="nav-toggle">☰</label>
+    <nav class="main">
+      <a href="index.html">Home</a>
+      <div class="group" tabindex="0"><span>About</span>
+        <div class="sub">
+          <a href="team.html">Meet the Team</a>
+          <a href="impact.html" class="active">Impact &amp; Research</a>
+        </div>
+      </div>
+      <div class="group" tabindex="0"><span>Veterans</span>
+        <div class="sub">
+          <a href="apply.html">Program &amp; Apply</a>
+          <a href="stories.html">Veteran Stories</a>
+          <a href="faq.html">FAQ</a>
+          <a href="resources.html">Mental Health Resources</a>
+        </div>
+      </div>
+      <div class="group" tabindex="0"><span>How to Help</span>
+        <div class="sub">
+          <a href="donate.html">Donate</a>
+          <a href="get-involved.html">Volunteer &amp; Partner</a>
+          <a href="https://aya-mission.brikl.store" target="_blank" rel="noopener">Merch Shop</a>
+        </div>
+      </div>
+      <a href="donate.html" class="btn-donate">Be the Bridge</a>
+    </nav>
+  </div>
+</header>
+
+<section class="band">
+  <div class="wrap on-green section-head"><span class="tape">The Impact of Our Work</span></div>
+  <div class="wrap">
+    <div class="grid cols-3">
+      <div class="card stat"><span class="num">110</span><span class="lbl">Veterans have completed our program and are improving their lives</span></div>
+      <div class="card stat"><span class="num">$12,000</span><span class="lbl">Raised in community support since our founding</span></div>
+      <div class="card stat"><span class="num">PHQ-9 · GAD-7 · EEG</span><span class="lbl">We support Veterans while capturing real outcome data</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- THE PROBLEM -->
+<section class="band">
+  <div class="torn">
+    <div class="torn-inner prose">
+      <div class="section-head"><span class="tape small">The Problem — Where's the Need</span></div>
+      <ul style="max-width:760px; margin:26px auto 0">
+        <li><strong>Suicide:</strong> 6,407 veteran suicides reported in 2022.</li>
+        <li><strong>Depression:</strong> Veterans are 5x more likely to experience major depression.</li>
+        <li><strong>PTSD:</strong> 50% of veterans with PTSD do not seek treatment.</li>
+        <li><strong>Military Sexual Trauma:</strong> 1 in 3 female veterans report MST, linked to higher intimate partner violence rates.</li>
+        <li><strong>Prescriptions:</strong> 50% of veterans in VA care are prescribed at least one mental health medication.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- MEASURABLE OUTCOMES -->
+<section class="band">
+  <div class="torn">
+    <div class="torn-inner prose">
+      <div class="section-head"><span class="tape small">Measurable Mental Health Impact</span></div>
+      <p style="max-width:800px; margin:26px auto 0">Veterans participating in The Aya Mission's program have shown measurable improvement in mental health outcomes. Pre-ceremony assessments showed <strong>50%</strong> of participants scoring at moderate or greater levels of depression (PHQ-9) and <strong>64%</strong> at moderate or greater levels of anxiety (GAD-7). By the 3-month post-ceremony follow-up, moderate-or-greater depression dropped to <strong>22%</strong>, and moderate-or-greater anxiety symptoms were eliminated entirely — <strong>0%</strong> of participants scored in the moderate-or-greater range.</p>
+
+      <h3 class="center" style="margin-top:40px">Early EEG Findings</h3>
+      <p style="max-width:800px; margin:14px auto 0">In a preliminary case, a Veteran with a 100% PTSD rating showed a measurable neurological shift following ceremony. <strong>Beta</strong> wave activity (hypervigilance) dropped from <strong>44% to 13%</strong>. <strong>Theta</strong> activity (emotional processing) rose from <strong>20% to 45%</strong>. <strong>Delta</strong> stabilized near <strong>30%</strong>, and <strong>Alpha</strong> increased — a pattern consistent with a shift from a trauma-locked state toward a more regulated, recovery-oriented brain state. This is a single case, not a controlled study, but points to a promising direction for further research.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="band">
+  <div class="wrap on-green section-head"><span class="tape">Testimonials</span></div>
+  <div class="wrap">
+    <div class="grid cols-3">
+      <div class="card">
+        <p class="quote">"...The Aya Mission opened doors for me so that I could unpack all the trauma from combat."</p>
+        <p class="quote-by">— SGT Michael Telles</p>
+      </div>
+      <div class="card">
+        <p class="quote">"...I felt the weight of the world leaving my shoulders. Although the pain still lingers, I am hopeful for the future."</p>
+        <p class="quote-by">— SSG Ulises Lopez</p>
+      </div>
+      <div class="card">
+        <p class="quote">"...I feel that I can love my family more deeply. I feel like a new man."</p>
+        <p class="quote-by">— SGT Andrew "Doc" Lunsford</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LISTEN -->
+<section class="band">
+  <div class="torn">
+    <div class="torn-inner prose">
+      <div class="section-head"><span class="tape small">Listen to Them Speak</span></div>
+      <div class="grid cols-2" style="margin-top:30px">
+        <div>
+          <h3>Sacred Healing</h3>
+          <p>Veteran Nathan Henderson shares his transformative journey with Ayahuasca and plant medicines — his struggles with post-military mental health, divorce, and healing through nature and community. Prior therapy is essential for plant medicine experiences, and healing is an ongoing journey offering hope to other veterans.</p>
+          <a class="btn dark" style="margin-top:6px" href="https://spotify.link/JQqcpOlmTXb" target="_blank" rel="noopener">Listen on Spotify</a>
+        </div>
+        <div>
+          <h3>Warrior's Rebirth</h3>
+          <p>Ulises Lopez's transformative path from a challenging childhood to decorated U.S. Army combat veteran, through post-service struggles with addiction and mental health, ultimately led to his healing through plant medicine and inspired him to co-found The Aya Mission.</p>
+          <a class="btn dark" style="margin-top:6px" href="https://open.spotify.com/episode/2BjqDxvJvqQ1dFmxKnvg1n" target="_blank" rel="noopener">Listen on Spotify</a>
+        </div>
+        <div>
+          <h3>Mission Impact</h3>
+          <p>Patrick Gibbons discusses the nonprofit's work providing peer support and integration services for veterans pursuing entheogenic healing, the challenges veterans face accessing alternative mental health care, and TAM's mission to ensure no veteran faces that journey alone.</p>
+          <a class="btn dark" style="margin-top:6px" href="https://open.spotify.com/episode/4Cv2SLjoOxFy3D1iCoSbsu" target="_blank" rel="noopener">Listen on Spotify</a>
+        </div>
+        <div>
+          <h3>Trauma Transcended</h3>
+          <p>Veteran Andrew Lunsford shares his profound healing journey from PTSD and substance abuse through plant medicines, highlighting how support systems, personal growth, and alternative therapies have transformed his life and empowered his recovery from trauma.</p>
+          <a class="btn dark" style="margin-top:6px" href="https://open.spotify.com/episode/5ecFEI6xpyFO7NCbtLvrFE" target="_blank" rel="noopener">Listen on Spotify</a>
+        </div>
+      </div>
+      <p class="center" style="margin-top:26px">More stories, photos, and episodes on our <a href="stories.html">Veteran Stories</a> page.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band on-green center">
+  <div class="wrap">
+    <h2 style="font-size:1.7rem">Help us reach the next 110 veterans</h2>
+    <p style="margin:12px 0 24px; color:#f2f0e6">Every dollar goes directly to preparation coaching, integration support, and veteran care.</p>
+    <a class="btn gold" href="donate.html">Be the Bridge</a>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="cols">
+    <div>
+      <h4>The Aya Mission</h4>
+      <p>TAM provides preparation and integration support. Sacramental ceremonies are conducted by independent religious organizations.</p>
+      <p style="margin-top:10px">EIN: <a href="https://apps.irs.gov/pub/epostcard/dl/FinalLetter_86-3391298_THEAYAMISSION_11222024_00.pdf" target="_blank" rel="noopener">86-3391298</a></p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="team.html">Our Team</a></li>
+        <li><a href="impact.html">Impact</a></li>
+        <li><a href="apply.html">Apply for Support</a></li>
+        <li><a href="stories.html">Veteran Stories</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="resources.html">Mental Health Resources</a></li>
+        <li><a href="get-involved.html">Get Involved</a></li>
+        <li><a href="donate.html">Donations</a></li>
+        <li><a href="https://aya-mission.brikl.store" target="_blank" rel="noopener">Merch Shop</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Connect</h4>
+      <ul>
+        <li><a href="https://www.facebook.com/theayamission" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a href="https://www.instagram.com/theayamission/" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://x.com/TheAyaMission" target="_blank" rel="noopener">X</a></li>
+        <li><a href="https://www.linkedin.com/company/the-aya-mission/about" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://mailchi.mp/9acd1b7b15be/newsletter-signup" target="_blank" rel="noopener">Newsletter</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Crisis Support</h4>
+      <p>Veterans Crisis Line: dial <strong>988</strong>, then press <strong>1</strong> — or text <strong>838255</strong>. Confidential support, 24/7. You don't need to be enrolled in VA benefits to connect.</p>
+    </div>
+  </div>
+  <div class="fine">© 2026 The Aya Mission · 501(c)(3) nonprofit · <a href="https://theayamission.org/privacy-policy">Privacy Policy</a></div>
+</footer>
+
+</body>
+</html>

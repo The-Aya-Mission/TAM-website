@@ -39,8 +39,12 @@ body::before {
 /* phones: repeat a native-resolution tile instead of stretching (stays crisp at any DPR) */
 @media (max-width: 900px) {
   body::before {
-    background: var(--green) url("../assets/bg-green-tile.jpg") repeat;
-    background-size: 480px 480px;
+    background-color: var(--green);
+    background-image:
+      radial-gradient(ellipse at 50% 35%, rgba(0,0,0,0) 45%, rgba(0,0,0,.30) 100%),
+      url("../assets/bg-green-tile.jpg");
+    background-size: 100% 100%, 480px 480px;
+    background-repeat: no-repeat, repeat;
   }
 }
 
@@ -435,7 +439,4 @@ footer .fine {
   font-family: 'Marcellus', serif; font-size: 1.15rem; letter-spacing: .06em;
   color: var(--ink) !important;
   padding: 16px 20px;
-  background-image: url("../assets/tape-small.svg");
-  background-size: 100% 100%; background-repeat: no-repeat;
-  filter: drop-shadow(0 3px 8px rgba(0,0,0,.35));
-  tran
+  ba

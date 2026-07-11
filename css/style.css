@@ -326,6 +326,7 @@ section.band:nth-of-type(even) .torn { border-image-source: url("../assets/paper
 
 /* cutout photo (transparent bg, straight from the deck) */
 .cutout { filter: drop-shadow(0 8px 20px rgba(0,0,0,.5)); }
+.center > .cutout, .center .cutout { margin-left: auto; margin-right: auto; }
 
 /* ---------- gallery ---------- */
 .gallery { display: grid; gap: 26px; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); margin-top: 40px; }

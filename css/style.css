@@ -109,13 +109,17 @@ label.nav-toggle-btn { display: none; }
 
 /* ---------- gold tape headline (real deck paint element) ---------- */
 .tape {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1.25;
   color: var(--ink);
   font-family: 'Marcellus', serif;
   font-size: clamp(1.4rem, 3.2vw, 2.2rem);
   letter-spacing: .08em;
   text-transform: uppercase;
-  padding: .42em 1.5em;
+  padding: .5em 2em .5em 1.35em; /* extra room for the pointed end */
   transform: rotate(-.6deg);
   background-image: url("../assets/tape-wide.svg");
   background-size: 100% 100%;
@@ -125,7 +129,18 @@ label.nav-toggle-btn { display: none; }
 .tape.small {
   font-size: clamp(1.1rem, 1.8vw, 1.45rem); letter-spacing: .1em; transform: rotate(.5deg);
   background-image: url("../assets/tape-small.svg");
-  padding: .5em 1.6em;
+  padding: .55em 1.9em .55em 1.35em;
+}
+/* alternate mirrored tape per section so headlines don't repeat */
+section.band:nth-of-type(even) .tape {
+  background-image: url("../assets/tape-wide-flip.svg");
+  padding: .5em 1.35em .5em 2em;
+  transform: rotate(.5deg);
+}
+section.band:nth-of-type(even) .tape.small {
+  background-image: url("../assets/tape-small-flip.svg");
+  padding: .55em 1.35em .55em 1.9em;
+  transform: rotate(-.5deg);
 }
 
 /* ---------- torn paper panels (real deck paper) ---------- */
@@ -423,18 +438,4 @@ footer .fine {
   background-image: url("../assets/tape-small.svg");
   background-size: 100% 100%; background-repeat: no-repeat;
   filter: drop-shadow(0 3px 8px rgba(0,0,0,.35));
-  transition: transform .15s ease;
-}
-.tape-link:nth-child(even) { transform: rotate(.8deg); }
-.tape-link:nth-child(odd) { transform: rotate(-.8deg); }
-.tape-link:hover { background-image: url("../assets/tape-small-hover.svg"); transform: rotate(0deg) translateY(-2px); }
-
-/* ---------- mobile comfort: tighter paper margins, roomier text ---------- */
-@media (max-width: 700px) {
-  .wrap { padding: 0 14px; }
-  section.band { padding: 44px 0; }
-  .torn {
-    border-width: 34px 13px;
-    border-image-width: 34px 17px 34px 12px;
-  }
-  .torn-inner { padding
+  tran

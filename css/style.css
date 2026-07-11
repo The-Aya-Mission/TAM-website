@@ -431,6 +431,7 @@ label.nav-toggle-btn { order: 4; }
 
 /* ---------- responsive nav: hamburger + Be the Bridge only ---------- */
 @media (max-width: 900px) {
+  header.site { position: static; }
   .nav-bar { gap: 10px; }
   .brand img { height: 46px; }
   .brand span { font-size: .92rem; letter-spacing: .08em; }
@@ -454,6 +455,4 @@ label.nav-toggle-btn { order: 4; }
   nav.main .group > span { color: var(--gold); font-size: .8rem; padding: 10px 8px 2px; }
   nav.main .group .sub {
     display: block; position: static; border: 0; box-shadow: none;
-    background: transparent; padding: 0 0 0 16px; min-width: 0;
-  }
-}
+    background: transparent; paddi

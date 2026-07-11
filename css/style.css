@@ -58,9 +58,10 @@ img { max-width: 100%; display: block; }
 
 /* ---------- header ---------- */
 header.site {
-  background: rgba(12, 26, 17, .92);
-  backdrop-filter: blur(6px);
-  border-bottom: 1px solid rgba(217, 183, 119, .25);
+  background: linear-gradient(180deg, rgba(8, 18, 12, .78), rgba(8, 18, 12, .38));
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(217, 183, 119, .16);
   position: sticky; top: 0; z-index: 50;
 }
 .nav-bar {
@@ -436,7 +437,4 @@ footer .fine {
 }
 .tape-link {
   display: block; text-decoration: none; text-align: center;
-  font-family: 'Marcellus', serif; font-size: 1.15rem; letter-spacing: .06em;
-  color: var(--ink) !important;
-  padding: 16px 20px;
-  ba
+  font-family: 'Marcellus', serif; font-size: 1.15

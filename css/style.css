@@ -384,4 +384,76 @@ footer .fine {
 }
 .stat-band p { max-width: 780px; margin: 16px auto 0; color: #f2f0e6; }
 
-/* ---------- s
+/* ---------- tape link grid (Explore section) ---------- */
+.tape-links {
+  display: grid; gap: 24px 18px; margin-top: 44px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+.tape-link {
+  display: block; text-decoration: none; text-align: center;
+  font-family: 'Marcellus', serif; font-size: 1.15rem; letter-spacing: .06em;
+  color: var(--ink) !important;
+  padding: 16px 20px;
+  background-image: url("../assets/tape-small.svg");
+  background-size: 100% 100%; background-repeat: no-repeat;
+  filter: drop-shadow(0 3px 8px rgba(0,0,0,.35));
+  transition: transform .15s ease;
+}
+.tape-link:nth-child(even) { transform: rotate(.8deg); }
+.tape-link:nth-child(odd) { transform: rotate(-.8deg); }
+.tape-link:hover { background-image: url("../assets/tape-small-hover.svg"); transform: rotate(0deg) translateY(-2px); }
+
+/* ---------- mobile comfort: tighter paper margins, roomier text ---------- */
+@media (max-width: 700px) {
+  .wrap { padding: 0 14px; }
+  section.band { padding: 44px 0; }
+  .torn {
+    border-width: 26px 10px;
+    border-image-width: 26px 13px 26px 9px;
+  }
+  .torn-inner { padding: 22px 12px; }
+  .card {
+    border-width: 24px 12px;
+    border-image-width: 24px 14px 24px 10px;
+    padding: 14px 8px 12px;
+  }
+  .grid { gap: 34px 20px; }
+  .hero { padding: 56px 0 48px; }
+  .hero .logo-panel { border-width: 24px 14px; border-image-width: 24px 16px 24px 11px; padding: 12px 14px 8px; }
+  .tape { font-size: clamp(1.15rem, 5.6vw, 1.7rem); padding: .45em 1.1em; }
+}
+
+/* ---------- header layout: brand | nav | donate (desktop) ---------- */
+.nav-bar .brand { order: 0; }
+nav.main { order: 2; }
+.nav-bar > .btn-donate { order: 3; margin-left: 12px; }
+label.nav-toggle-btn { order: 4; }
+
+/* ---------- responsive nav: hamburger + Be the Bridge only ---------- */
+@media (max-width: 900px) {
+  .nav-bar { gap: 10px; }
+  .brand img { height: 46px; }
+  .brand span { font-size: .92rem; letter-spacing: .08em; }
+  label.nav-toggle-btn {
+    display: block; color: var(--gold);
+    font-size: 1.9rem; line-height: 1; cursor: pointer; user-select: none;
+    padding: 4px 6px;
+  }
+  .nav-bar > .btn-donate {
+    margin-left: auto;
+    padding: 8px 14px !important; font-size: .78rem;
+  }
+  nav.main {
+    display: none; width: 100%; order: 5;
+    flex-direction: column; align-items: flex-start;
+    padding: 12px 0 6px;
+  }
+  #nav-toggle:checked ~ nav.main { display: flex; }
+  nav.main a { font-size: .95rem; padding: 10px 8px; }
+  nav.main .group { width: 100%; }
+  nav.main .group > span { color: var(--gold); font-size: .8rem; padding: 10px 8px 2px; }
+  nav.main .group .sub {
+    display: block; position: static; border: 0; box-shadow: none;
+    background: transparent; padding: 0 0 0 16px; min-width: 0;
+  }
+}

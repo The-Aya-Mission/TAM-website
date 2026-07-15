@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page Moved — The Aya Mission</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="/assets/logo-small.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+<script>
+/* Redirect known old-site paths to their new homes */
+(function(){
+  var p = location.pathname.toLowerCase().replace(/\/+$/,"");
+  var map = {
+    "/privacy-policy":"/privacy.html",
+    "/about":"/our-story.html", "/about-us":"/our-story.html", "/our-story":"/our-story.html",
+    "/our-mission":"/our-story.html", "/mission":"/our-story.html",
+    "/team":"/team.html", "/our-team":"/team.html", "/meet-the-team":"/team.html",
+    "/donate":"/donate.html", "/donation":"/donate.html", "/give":"/donate.html",
+    "/contact":"/contact.html", "/contact-us":"/contact.html",
+    "/faq":"/faq.html", "/faqs":"/faq.html",
+    "/apply":"/apply.html", "/get-help":"/apply.html", "/program":"/apply.html",
+    "/programs":"/apply.html", "/veteran-program":"/apply.html", "/retreats":"/apply.html",
+    "/volunteer":"/get-involved.html", "/get-involved":"/get-involved.html",
+    "/stories":"/stories.html", "/testimonials":"/stories.html",
+    "/resources":"/resources.html", "/impact":"/impact.html", "/research":"/impact.html",
+    "/families":"/families.html", "/partners":"/partners.html",
+    "/shop":"https://aya-mission.brikl.store", "/merch":"https://aya-mission.brikl.store"
+  };
+  if (map[p]) location.replace(map[p]);
+})();
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="crisis">In crisis? Veterans Crisis Line — dial <a href="tel:988">988</a> then press 1, or text <a href="sms:838255">838255</a>. Free, confidential, 24/7.</div>
+<section id="main" class="band">
+  <div class="wrap on-green section-head"><h1 class="tape">Page Moved</h1>
+    <p style="max-width:640px; margin:24px auto 0; color:#f2f0e6">We rebuilt our website, and this page has a new home. Here's where you probably want to go:</p>
+  </div>
+  <div class="wrap center" style="margin-top:36px">
+    <p><a class="btn gold" href="/">Go to the Homepage</a></p>
+    <p style="margin-top:22px"><a class="btn dark" href="/apply.html">Veteran Program</a>
+       <a class="btn dark" style="margin-left:8px" href="/donate.html">Donate</a>
+       <a class="btn dark" style="margin-left:8px" href="/contact.html">Contact Us</a></p>
+  </div>
+</section>
+</body>
+</html>

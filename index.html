@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
 <!-- paint/tear SVG filters -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
@@ -33,7 +34,7 @@
   <div class="nav-bar">
     <a class="brand" href="index.html"><img src="assets/logo-small.png" alt="The Aya Mission logo"><span>The Aya Mission</span></a>
     <input type="checkbox" id="nav-toggle">
-    <label class="nav-toggle-btn" for="nav-toggle">☰</label>
+    <label class="nav-toggle-btn" for="nav-toggle" aria-label="Open menu">☰</label>
     <nav class="main">
       <a href="index.html" class="active">Home</a>
       <div class="group" tabindex="0"><span>About</span>
@@ -53,9 +54,9 @@
           <a href="about-ptsd.html">About the Invisible Wounds</a>
           <a href="about-healing.html">About Entheogenic Healing</a>
           <a href="resources.html">Mental Health Resources</a>
+          <a href="families.html">Families &amp; Caregivers</a>
         </div>
       </div>
-      <a href="families.html">Families</a>
       <div class="group" tabindex="0"><span>How to Help</span>
         <div class="sub">
           <a href="donate.html">Donate</a>
@@ -84,10 +85,10 @@
 </section>
 
 <!-- MISSION -->
-<section class="band">
+<section id="main" class="band">
   <div class="torn">
     <div class="torn-inner prose center">
-      <span class="tape">Our Mission</span>
+      <h2 class="tape">Our Mission</h2>
       <p class="lead" style="max-width:820px; margin:26px auto 0">The Aya Mission supports Veterans on the path to healing and wholeness. Through ceremony, community, and connection, we help Veterans work through the invisible wounds of service — trauma, isolation, and the weight that too often leads to suicide. We walk alongside Veterans as they prepare for this journey, connect them with trusted partners in the Arizona desert, and welcome them into our Peer Support Group, where healing continues long after ceremony ends.</p>
       <img class="cutout" src="assets/photo-group.webp" alt="Veterans and volunteers of The Aya Mission gathered together" style="max-width:min(720px, 96%); margin:34px auto 0; display:block" loading="lazy">
     </div>
@@ -106,7 +107,7 @@
 <section class="band">
   <div class="torn">
     <div class="torn-inner prose center">
-      <span class="tape small">But Hope Is Real — and Measurable</span>
+      <h2 class="tape small">But Hope Is Real — and Measurable</h2>
       <p class="lead" style="max-width:800px; margin:26px auto 0"><strong>110 Veterans</strong> have completed our program and are improving their lives. At the 3-month follow-up, moderate-or-greater anxiety dropped from <strong>64% to 0%</strong> of participants, and moderate-or-greater depression fell from <strong>50% to 22%</strong>.</p>
       <p class="fine" style="margin-top:14px">Measured with PHQ-9 and GAD-7 clinical assessments, pre-ceremony vs. 3-month post-ceremony.</p>
     </div>
@@ -115,7 +116,7 @@
 
 <!-- TESTIMONIALS -->
 <section class="band">
-  <div class="wrap on-green section-head"><span class="tape">In Their Words</span></div>
+  <div class="wrap on-green section-head"><h2 class="tape">In Their Words</h2></div>
   <div class="wrap">
     <div class="grid cols-3">
       <div class="card">
@@ -136,7 +137,30 @@
 
 <!-- THREE PATHWAYS -->
 <section class="band">
-  <div class="wrap on-green section-head"><span class="tape">Your Next Step</span></div>
+  <div class="wrap on-green section-head"><h2 class="tape small">How the Program Works</h2>
+    <p style="margin:18px auto 0; color:#f2f0e6; font-size:.95rem">One continuous arc of care — never a single weekend.</p>
+  </div>
+  <div class="wrap" style="margin-top:36px">
+    <div class="grid cols-3">
+      <div class="card">
+        <h3>1 · Before</h3>
+        <p>Virtual therapy, peer coaching, and preparation in the months ahead — you'll know your cohort before you arrive.</p>
+      </div>
+      <div class="card">
+        <h3>2 · The Retreat Weekend</h3>
+        <p>Grounding therapy, yoga, group coaching, meals, and peer support surrounding independently held ceremonies.</p>
+      </div>
+      <div class="card">
+        <h3>3 · After</h3>
+        <p>Integration sessions, follow-up, and ongoing cohort meetings — healing grows in the support that surrounds it.</p>
+      </div>
+    </div>
+    <p class="center" style="margin-top:30px"><a class="btn gold" href="apply.html">See the Full Program</a></p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap on-green section-head"><h2 class="tape">Your Next Step</h2></div>
   <div class="wrap">
     <div class="grid cols-3">
       <div class="card">
@@ -162,7 +186,7 @@
 </section>
 
 <section class="band">
-  <div class="wrap on-green section-head"><span class="tape small">Upcoming Events</span>
+  <div class="wrap on-green section-head"><h2 class="tape small">Upcoming Events</h2>
     <p style="margin:18px auto 0; color:#f2f0e6; font-size:.95rem">Live availability — applications reviewed by our team.</p>
   </div>
   <div class="wrap" style="margin-top:36px">
@@ -179,7 +203,7 @@
 <section class="band">
   <div class="torn">
     <div class="torn-inner prose center">
-      <span class="tape">Join Us in the Fight</span>
+      <h2 class="tape">Join Us in the Fight</h2>
       <p style="margin-top:24px; font-size:1.1rem; max-width:760px; margin-left:auto; margin-right:auto">Contributions to The Aya Mission fund preparation coaching and integration support, cover veterans' travel and meals at ceremony weekends, and build the research base that expands access to healing. We fundraise with Zeffy, so <strong>100% of your donation</strong> goes to the mission.</p>
       <a class="btn dark" href="donate.html">Donate Today</a>
     </div>
@@ -189,7 +213,7 @@
 <!-- NEWSLETTER -->
 <section class="band">
   <div class="wrap on-green center">
-    <div class="section-head"><span class="tape small">Stay Close</span></div>
+    <div class="section-head"><h2 class="tape small">Stay Close</h2></div>
     <p style="margin:24px 0 20px; color:#f2f0e6">Not ready to dive in? Ceremony updates, veteran stories, and ways to help — once a month.</p>
     <a class="btn gold" href="https://mailchi.mp/9acd1b7b15be/newsletter-signup" target="_blank" rel="noopener">Sign Up for Our Newsletter</a>
   </div>
@@ -240,5 +264,6 @@
 </footer>
 
 <script src="js/app.js" defer></script>
+<script src="js/analytics.js" defer></script>
 </body>
 </html>

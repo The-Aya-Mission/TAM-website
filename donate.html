@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
 <!-- paint/tear SVG filters -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
@@ -33,7 +34,7 @@
   <div class="nav-bar">
     <a class="brand" href="index.html"><img src="assets/logo-small.png" alt="The Aya Mission logo"><span>The Aya Mission</span></a>
     <input type="checkbox" id="nav-toggle">
-    <label class="nav-toggle-btn" for="nav-toggle">☰</label>
+    <label class="nav-toggle-btn" for="nav-toggle" aria-label="Open menu">☰</label>
     <nav class="main">
       <a href="index.html">Home</a>
       <div class="group" tabindex="0"><span>About</span>
@@ -53,9 +54,9 @@
           <a href="about-ptsd.html">About the Invisible Wounds</a>
           <a href="about-healing.html">About Entheogenic Healing</a>
           <a href="resources.html">Mental Health Resources</a>
+          <a href="families.html">Families &amp; Caregivers</a>
         </div>
       </div>
-      <a href="families.html">Families</a>
       <div class="group" tabindex="0"><span>How to Help</span>
         <div class="sub">
           <a href="donate.html" class="active">Donate</a>
@@ -70,8 +71,8 @@
   </div>
 </header>
 
-<section class="band">
-  <div class="wrap on-green section-head"><span class="tape">Your Donation Changes Veterans' Lives</span>
+<section id="main" class="band">
+  <div class="wrap on-green section-head"><h1 class="tape">Your Donation Changes Veterans' Lives</h1>
     <p style="max-width:760px; margin:24px auto 0; color:#f2f0e6">At The Aya Mission, every contribution directly supports our veteran healing programs. As a veteran-founded and operated nonprofit, we ensure your donation creates maximum impact for those who served. As a 501(c)(3) nonprofit organization, all donations are tax-deductible.</p>
   </div>
 </section>
@@ -79,7 +80,7 @@
 <section class="band">
   <div class="torn">
     <div class="torn-inner prose">
-      <div class="section-head"><span class="tape small">Make an Impact Today</span></div>
+      <div class="section-head"><h2 class="tape small">Make an Impact Today</h2></div>
       <p class="center" style="margin:20px auto 6px"><strong>Did you know?</strong> We fundraise with Zeffy to ensure 100% of your donation goes to our mission. You'll receive a tax receipt for every donation.</p>
       <iframe class="embed" src="https://www.zeffy.com/embed/donation-form/donate-to-change-lives-4006" title="Donate to The Aya Mission" style="height:700px" loading="lazy" allow="payment"></iframe>
     </div>
@@ -87,7 +88,7 @@
 </section>
 
 <section class="band">
-  <div class="wrap on-green section-head"><span class="tape">How Your Gift Helps</span></div>
+  <div class="wrap on-green section-head"><h2 class="tape">How Your Gift Helps</h2></div>
   <div class="wrap">
     <div class="grid cols-4">
       <div class="card stat"><span class="num">$300</span><span class="lbl">Covers full preparation coaching and integration support for one Veteran</span></div>
@@ -101,7 +102,7 @@
 <section class="band">
   <div class="torn">
     <div class="torn-inner prose center">
-      <div class="section-head"><span class="tape small">Immediate Support</span></div>
+      <div class="section-head"><h2 class="tape small">Immediate Support</h2></div>
       <ul class="checks" style="max-width:620px; margin:24px auto 0 !important; text-align:left">
         <li>Funds preparation coaching and integration support for veterans</li>
         <li>Covers travel and accommodation costs</li>
@@ -165,5 +166,6 @@
 </footer>
 
 <script src="js/app.js" defer></script>
+<script src="js/analytics.js" defer></script>
 </body>
 </html>

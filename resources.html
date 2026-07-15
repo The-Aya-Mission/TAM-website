@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
 <!-- paint/tear SVG filters -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
@@ -33,7 +34,7 @@
   <div class="nav-bar">
     <a class="brand" href="index.html"><img src="assets/logo-small.png" alt="The Aya Mission logo"><span>The Aya Mission</span></a>
     <input type="checkbox" id="nav-toggle">
-    <label class="nav-toggle-btn" for="nav-toggle">☰</label>
+    <label class="nav-toggle-btn" for="nav-toggle" aria-label="Open menu">☰</label>
     <nav class="main">
       <a href="index.html">Home</a>
       <div class="group" tabindex="0"><span>About</span>
@@ -70,15 +71,15 @@
   </div>
 </header>
 
-<section class="band">
-  <div class="wrap on-green section-head"><span class="tape">Mental Health Resources</span></div>
+<section id="main" class="band">
+  <div class="wrap on-green section-head"><h1 class="tape">Mental Health Resources</h1></div>
 </section>
 
 <!-- VHA -->
 <section class="band">
   <div class="torn">
     <div class="torn-inner prose">
-      <div class="section-head"><span class="tape small">VHA Mental Health Services</span></div>
+      <div class="section-head"><h2 class="tape small">VHA Mental Health Services</h2></div>
       <p style="max-width:760px; margin:24px auto 0">The Veterans Health Administration is supported by folks that have skin in the game; VHA staff is not there for the money. They are there to give back in appreciation of your sacrifice. Let them help you.</p>
       <div class="grid cols-3" style="margin-top:30px">
         <div>
@@ -105,7 +106,7 @@
 <section class="band">
   <div class="torn">
     <div class="torn-inner prose">
-      <div class="section-head"><span class="tape small">Non-VA Mental Health Support</span></div>
+      <div class="section-head"><h2 class="tape small">Non-VA Mental Health Support</h2></div>
       <p style="max-width:760px; margin:24px auto 0">Seeking support is vital for mental well-being, and there are many excellent non-VA mental health resources available to provide compassionate care tailored to individual needs.</p>
       <div class="grid cols-2" style="margin-top:30px">
         <div>
@@ -125,7 +126,7 @@
 <section class="band">
   <div class="torn">
     <div class="torn-inner prose">
-      <div class="section-head"><span class="tape small">Community Peer Support Groups We Trust</span></div>
+      <div class="section-head"><h2 class="tape small">Community Peer Support Groups We Trust</h2></div>
       <p style="max-width:760px; margin:24px auto 0">Veteran-led peer support groups create community by connecting individuals with shared experiences, fostering understanding and trust. These groups empower veterans to support one another, promoting healing through shared stories and camaraderie.</p>
       <div class="grid cols-2" style="margin-top:30px">
         <div>
@@ -202,5 +203,6 @@
 </footer>
 
 <script src="js/app.js" defer></script>
+<script src="js/analytics.js" defer></script>
 </body>
 </html>

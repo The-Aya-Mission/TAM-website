@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
 <!-- paint/tear SVG filters -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
@@ -33,7 +34,7 @@
   <div class="nav-bar">
     <a class="brand" href="index.html"><img src="assets/logo-small.png" alt="The Aya Mission logo"><span>The Aya Mission</span></a>
     <input type="checkbox" id="nav-toggle">
-    <label class="nav-toggle-btn" for="nav-toggle">☰</label>
+    <label class="nav-toggle-btn" for="nav-toggle" aria-label="Open menu">☰</label>
     <nav class="main">
       <a href="index.html">Home</a>
       <div class="group" tabindex="0"><span>About</span>
@@ -53,9 +54,9 @@
           <a href="about-ptsd.html">About the Invisible Wounds</a>
           <a href="about-healing.html">About Entheogenic Healing</a>
           <a href="resources.html">Mental Health Resources</a>
+          <a href="families.html">Families &amp; Caregivers</a>
         </div>
       </div>
-      <a href="families.html">Families</a>
       <div class="group" tabindex="0"><span>How to Help</span>
         <div class="sub">
           <a href="donate.html">Donate</a>
@@ -70,8 +71,8 @@
   </div>
 </header>
 
-<section class="band">
-  <div class="wrap on-green section-head"><span class="tape">Get Involved</span>
+<section id="main" class="band">
+  <div class="wrap on-green section-head"><h1 class="tape">Get Involved</h1>
     <p style="max-width:720px; margin:24px auto 0; color:#f2f0e6">The Aya Mission runs on people who show up — veterans and civilians alike. Whether you have an hour a month or a skill to share, there's a place for you here.</p>
   </div>
 </section>
@@ -103,7 +104,7 @@
 </section>
 
 <section class="band">
-  <div class="wrap on-green section-head"><span class="tape small">Open Volunteer Roles</span>
+  <div class="wrap on-green section-head"><h2 class="tape small">Open Volunteer Roles</h2>
     <p style="margin:18px auto 0; color:#f2f0e6; font-size:.95rem">Live from our volunteer roster — updated as retreats staff up.</p>
   </div>
   <div class="wrap" style="margin-top:36px">
@@ -119,7 +120,7 @@
 <section class="band">
   <div class="torn">
     <div class="torn-inner prose center">
-      <div class="section-head"><span class="tape small">Corporate &amp; Executive Retreats</span></div>
+      <div class="section-head"><h2 class="tape small">Corporate &amp; Executive Retreats</h2></div>
       <p style="max-width:760px; margin:24px auto 0">Bring your leadership team to a retreat built on the same trauma-informed foundation we provide veterans — and fund veteran healing in the process. Proceeds from executive retreats directly sponsor veteran cohorts.</p>
       <p style="margin:26px 0 0"><a class="btn gold" href="https://apply.theayamission.org/exec-retreat.html" data-app-href="/exec-retreat.html">Request a Corporate Retreat</a></p>
     </div>
@@ -129,7 +130,7 @@
 <section class="band">
   <div class="torn">
     <div class="torn-inner prose center">
-      <div class="section-head"><span class="tape small">Reach Out</span></div>
+      <div class="section-head"><h2 class="tape small">Reach Out</h2></div>
       <p style="max-width:640px; margin:24px auto">Tell us how you'd like to serve. Email us and a member of our team will follow up with next steps, role details, and onboarding.</p>
       <a class="btn dark" href="mailto:Contact@theayamission.org?subject=I%20want%20to%20get%20involved%20with%20The%20Aya%20Mission">Email Contact@theayamission.org</a>
       <p style="margin-top:26px">Prefer to start smaller? <a href="https://mailchi.mp/9acd1b7b15be/newsletter-signup" target="_blank" rel="noopener">Join the newsletter</a> or <a href="https://aya-mission.brikl.store" target="_blank" rel="noopener">grab some merch</a> — every bit helps.</p>
@@ -190,5 +191,6 @@
 </footer>
 
 <script src="js/app.js" defer></script>
+<script src="js/analytics.js" defer></script>
 </body>
 </html>

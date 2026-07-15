@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
 <div class="crisis">In crisis? Veterans Crisis Line — dial <a href="tel:988">988</a> then press 1, or text <a href="sms:838255">838255</a>. Free, confidential, 24/7.</div>
 
@@ -19,7 +20,7 @@
   <div class="nav-bar">
     <a class="brand" href="index.html"><img src="assets/logo-small.png" alt="The Aya Mission logo"><span>The Aya Mission</span></a>
     <input type="checkbox" id="nav-toggle">
-    <label class="nav-toggle-btn" for="nav-toggle">☰</label>
+    <label class="nav-toggle-btn" for="nav-toggle" aria-label="Open menu">☰</label>
     <nav class="main">
       <a href="index.html">Home</a>
       <div class="group" tabindex="0"><span>About</span>
@@ -39,9 +40,9 @@
           <a href="about-ptsd.html">About the Invisible Wounds</a>
           <a href="about-healing.html">About Entheogenic Healing</a>
           <a href="resources.html">Mental Health Resources</a>
+          <a href="families.html" class="active">Families &amp; Caregivers</a>
         </div>
       </div>
-      <a href="families.html" class="active">Families</a>
       <div class="group" tabindex="0"><span>How to Help</span>
         <div class="sub">
           <a href="donate.html">Donate</a>
@@ -56,8 +57,8 @@
   </div>
 </header>
 
-<section class="band">
-  <div class="wrap on-green section-head"><span class="tape">Families &amp; Caregivers</span>
+<section id="main" class="band">
+  <div class="wrap on-green section-head"><h1 class="tape">Families &amp; Caregivers</h1>
     <p style="max-width:720px; margin:24px auto 0; color:#f2f0e6">The wounds of service are carried by whole families. So is the healing.</p>
   </div>
 </section>
@@ -65,7 +66,7 @@
 <section class="band">
   <div class="torn">
     <div class="torn-inner prose center">
-      <div class="section-head"><span class="tape small">You're Part of This Mission</span></div>
+      <div class="section-head"><h2 class="tape small">You're Part of This Mission</h2></div>
       <p class="lead" style="max-width:800px; margin:26px auto 0">The Aya Mission program serves Veterans, their families, caregivers, and survivors. Spouses and loved ones live alongside the invisible wounds every day — and veterans who heal consistently tell us the greatest gift is being able to show up for their families again.</p>
       <p style="max-width:760px; margin:18px auto 0">"I feel that I can love my family more deeply. I feel like a new man," one veteran told us after completing the program. That's the outcome we work for — not just symptom relief, but restored connection at home.</p>
     </div>
@@ -85,7 +86,7 @@
 <section class="band">
   <div class="torn">
     <div class="torn-inner prose center">
-      <div class="section-head"><span class="tape small">Start the Conversation</span></div>
+      <div class="section-head"><h2 class="tape small">Start the Conversation</h2></div>
       <p style="max-width:700px; margin:24px auto 0">Whether you're researching on behalf of a veteran you love or seeking support yourself, the intake form is open to families — tell us your situation and we'll take it from there.</p>
       <div class="cta-row" style="margin-top:24px">
         <a class="btn dark" href="apply.html">Reach Out</a>
@@ -140,5 +141,6 @@
 </footer>
 
 <script src="js/app.js" defer></script>
+<script src="js/analytics.js" defer></script>
 </body>
 </html>

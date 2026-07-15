@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
 <!-- paint/tear SVG filters -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
@@ -33,7 +34,7 @@
   <div class="nav-bar">
     <a class="brand" href="index.html"><img src="assets/logo-small.png" alt="The Aya Mission logo"><span>The Aya Mission</span></a>
     <input type="checkbox" id="nav-toggle">
-    <label class="nav-toggle-btn" for="nav-toggle">☰</label>
+    <label class="nav-toggle-btn" for="nav-toggle" aria-label="Open menu">☰</label>
     <nav class="main">
       <a href="index.html">Home</a>
       <div class="group" tabindex="0"><span>About</span>
@@ -53,9 +54,9 @@
           <a href="about-ptsd.html">About the Invisible Wounds</a>
           <a href="about-healing.html">About Entheogenic Healing</a>
           <a href="resources.html">Mental Health Resources</a>
+          <a href="families.html">Families &amp; Caregivers</a>
         </div>
       </div>
-      <a href="families.html">Families</a>
       <div class="group" tabindex="0"><span>How to Help</span>
         <div class="sub">
           <a href="donate.html">Donate</a>
@@ -70,16 +71,16 @@
   </div>
 </header>
 
-<section class="band">
-  <div class="wrap on-green section-head"><span class="tape">Program Overview</span>
+<section id="main" class="band">
+  <div class="wrap on-green section-head"><h1 class="tape">Program Overview</h1>
     <p style="max-width:760px; margin:24px auto 0; color:#f2f0e6">A trauma-informed, veteran-centered retreat program built from lived reality and real need — held twice a year on Memorial Day and Veterans Day weekends, with a continuous arc of care in between. For Veterans, their families, caregivers, and survivors.</p>
   </div>
 </section>
 
 <section class="band">
   <div class="torn">
-    <div class="torn-inner prose center">
-      <div class="section-head"><span class="tape small">Why This Retreat Exists</span></div>
+    <div class="torn-inner prose">
+      <div class="section-head"><h2 class="tape small">Why This Retreat Exists</h2></div>
       <p style="max-width:800px; margin:24px auto 0">Too many veterans have been carrying trauma without a safe place to put it. Many explore nontraditional or spiritually oriented healing on their own — and keep it hidden because of stigma, fear of judgment, or the taboo around psychedelics and ceremony. For years, trauma-informed support simply didn't exist for veterans choosing these paths. They went alone because they felt they had to. We built this retreat so they never have to again.</p>
       <p style="max-width:800px; margin:18px auto 0">The idea began in 2020. We spent four years building it deliberately — safety protocols, trauma-informed policies, and a multidisciplinary team of therapists, medical staff, certified coaches, integration specialists, and facilitators trained in yoga, breathwork, and creative expression — before hosting our first cohort in 2024. What happened when veterans first arrived wasn't about ceremony at all: they connected, exhaled, and spoke openly, often for the first time in years.</p>
     </div>
@@ -89,7 +90,7 @@
 <section class="band">
   <div class="torn">
     <div class="torn-inner prose">
-      <div class="section-head"><span class="tape small">A Continuous Arc of Care</span></div>
+      <div class="section-head"><h2 class="tape small">A Continuous Arc of Care</h2></div>
       <div class="grid cols-3" style="margin-top:30px">
         <div>
           <h3>1 · Before</h3>
@@ -111,7 +112,7 @@
 <section class="band">
   <div class="torn">
     <div class="torn-inner prose">
-      <div class="section-head"><span class="tape small">What the Retreat Includes</span></div>
+      <div class="section-head"><h2 class="tape small">What the Retreat Includes</h2></div>
       <div class="grid cols-2" style="margin-top:26px; max-width:860px; margin-left:auto; margin-right:auto">
         <ul class="checks">
           <li>Safe housing and decompression</li>
@@ -133,7 +134,7 @@
 <section class="band">
   <div class="torn">
     <div class="torn-inner prose center">
-      <div class="section-head"><span class="tape small">The Battle Buddy System</span></div>
+      <div class="section-head"><h2 class="tape small">The Battle Buddy System</h2></div>
       <p class="lead" style="max-width:760px; margin:24px auto 0">No one enters or exits their experience alone. Every veteran is paired with a Battle Buddy — someone who has completed peer support training and personally walked a similar healing path. Connection, accountability, and stability, from the first call to long after the retreat ends.</p>
     </div>
   </div>
@@ -141,8 +142,8 @@
 
 <section class="band">
   <div class="torn">
-    <div class="torn-inner prose center">
-      <div class="section-head"><span class="tape small">How to Apply</span></div>
+    <div class="torn-inner prose">
+      <div class="section-head"><h2 class="tape small">How to Apply</h2></div>
       <p style="max-width:760px; margin:24px auto 0">Applications run through our secure intake portal. You'll create an account, tell us about yourself and your service (including a DD-214 upload for verification), and e-sign the waiver and community agreement. It takes about 15 minutes, and you can save and return anytime.</p>
       <p style="max-width:760px; margin:18px auto 0">Veterans who are accepted receive a direct link to our partner church's independent ceremony registration — the church conducts its own separate enrollment process.</p>
       <p class="fine" style="margin-top:18px">Already applied? <a href="https://apply.theayamission.org/" data-app-href="/">Sign in to your portal</a> to check your status.</p>
@@ -151,7 +152,7 @@
 </section>
 
 <section class="band">
-  <div class="wrap on-green section-head"><span class="tape">Upcoming Events</span>
+  <div class="wrap on-green section-head"><h2 class="tape">Upcoming Events</h2>
     <p style="max-width:700px; margin:24px auto 0; color:#f2f0e6">Live availability for the next ceremony weekends. Each application is reviewed by our team before acceptance.</p>
   </div>
   <div class="wrap" style="margin-top:40px">
@@ -217,5 +218,6 @@
 </footer>
 
 <script src="js/app.js" defer></script>
+<script src="js/analytics.js" defer></script>
 </body>
 </html>

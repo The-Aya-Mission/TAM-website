@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
 <!-- paint/tear SVG filters -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
@@ -33,7 +34,7 @@
   <div class="nav-bar">
     <a class="brand" href="index.html"><img src="assets/logo-small.png" alt="The Aya Mission logo"><span>The Aya Mission</span></a>
     <input type="checkbox" id="nav-toggle">
-    <label class="nav-toggle-btn" for="nav-toggle">☰</label>
+    <label class="nav-toggle-btn" for="nav-toggle" aria-label="Open menu">☰</label>
     <nav class="main">
       <a href="index.html">Home</a>
       <div class="group" tabindex="0"><span>About</span>
@@ -53,9 +54,9 @@
           <a href="about-ptsd.html">About the Invisible Wounds</a>
           <a href="about-healing.html">About Entheogenic Healing</a>
           <a href="resources.html">Mental Health Resources</a>
+          <a href="families.html">Families &amp; Caregivers</a>
         </div>
       </div>
-      <a href="families.html">Families</a>
       <div class="group" tabindex="0"><span>How to Help</span>
         <div class="sub">
           <a href="donate.html">Donate</a>
@@ -70,8 +71,8 @@
   </div>
 </header>
 
-<section class="band">
-  <div class="wrap on-green section-head"><span class="tape">The Impact of Our Work</span></div>
+<section id="main" class="band">
+  <div class="wrap on-green section-head"><h1 class="tape">The Impact of Our Work</h1></div>
   <div class="wrap">
     <div class="grid cols-3">
       <div class="card stat"><span class="num">110</span><span class="lbl">Veterans have completed our program and are improving their lives</span></div>
@@ -85,7 +86,7 @@
 <section class="band">
   <div class="torn">
     <div class="torn-inner prose">
-      <div class="section-head"><span class="tape small">The Problem — Where's the Need</span></div>
+      <div class="section-head"><h2 class="tape small">The Problem — Where's the Need</h2></div>
       <ul style="max-width:760px; margin:26px auto 0">
         <li><strong>Suicide:</strong> 6,407 veteran suicides reported in 2022.</li>
         <li><strong>Depression:</strong> Veterans are 5x more likely to experience major depression.</li>
@@ -101,7 +102,7 @@
 <section class="band">
   <div class="torn">
     <div class="torn-inner prose">
-      <div class="section-head"><span class="tape small">Measurable Mental Health Impact</span></div>
+      <div class="section-head"><h2 class="tape small">Measurable Mental Health Impact</h2></div>
       <p style="max-width:800px; margin:26px auto 0">Veterans participating in The Aya Mission's program have shown measurable improvement in mental health outcomes. Pre-ceremony assessments showed <strong>50%</strong> of participants scoring at moderate or greater levels of depression (PHQ-9) and <strong>64%</strong> at moderate or greater levels of anxiety (GAD-7). By the 3-month post-ceremony follow-up, moderate-or-greater depression dropped to <strong>22%</strong>, and moderate-or-greater anxiety symptoms were eliminated entirely — <strong>0%</strong> of participants scored in the moderate-or-greater range.</p>
 
       <h3 class="center" style="margin-top:40px">Early EEG Findings</h3>
@@ -114,7 +115,7 @@
 <section class="band">
   <div class="torn">
     <div class="torn-inner prose">
-      <div class="section-head"><span class="tape small">Our Research Arm: MindOps Zenith</span></div>
+      <div class="section-head"><h2 class="tape small">Our Research Arm: MindOps Zenith</h2></div>
       <p style="max-width:800px; margin:24px auto 0; text-align:center">The Aya Mission's research is conducted through <a href="https://mindopszenith.org" target="_blank" rel="noopener"><strong>MindOps Zenith</strong></a> — a research institute and IRB-aligned lab built to hold our work to the standard of formal human-subjects research. Every study runs as a structured protocol with ethics review, safety monitoring, and privacy-aware data practices, so the outcomes we report are ones we can stand behind.</p>
       <div class="grid cols-3" style="margin-top:34px">
         <div class="card">
@@ -144,7 +145,7 @@
 
 <!-- TESTIMONIALS -->
 <section class="band">
-  <div class="wrap on-green section-head"><span class="tape">Testimonials</span></div>
+  <div class="wrap on-green section-head"><h2 class="tape">Testimonials</h2></div>
   <div class="wrap">
     <div class="grid cols-3">
       <div class="card">
@@ -167,7 +168,7 @@
 <section class="band">
   <div class="torn">
     <div class="torn-inner prose">
-      <div class="section-head"><span class="tape small">Listen to Them Speak</span></div>
+      <div class="section-head"><h2 class="tape small">Listen to Them Speak</h2></div>
       <div class="grid cols-2" style="margin-top:30px">
         <div>
           <h3>Sacred Healing</h3>
@@ -243,5 +244,6 @@
 </footer>
 
 <script src="js/app.js" defer></script>
+<script src="js/analytics.js" defer></script>
 </body>
 </html>

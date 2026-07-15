@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
 <div class="crisis">In crisis? Veterans Crisis Line — dial <a href="tel:988">988</a> then press 1, or text <a href="sms:838255">838255</a>. Free, confidential, 24/7.</div>
 
@@ -19,7 +20,7 @@
   <div class="nav-bar">
     <a class="brand" href="index.html"><img src="assets/logo-small.png" alt="The Aya Mission logo"><span>The Aya Mission</span></a>
     <input type="checkbox" id="nav-toggle">
-    <label class="nav-toggle-btn" for="nav-toggle">☰</label>
+    <label class="nav-toggle-btn" for="nav-toggle" aria-label="Open menu">☰</label>
     <nav class="main">
       <a href="index.html">Home</a>
       <div class="group" tabindex="0"><span>About</span>
@@ -39,9 +40,9 @@
           <a href="about-ptsd.html">About the Invisible Wounds</a>
           <a href="about-healing.html">About Entheogenic Healing</a>
           <a href="resources.html">Mental Health Resources</a>
+          <a href="families.html">Families &amp; Caregivers</a>
         </div>
       </div>
-      <a href="families.html">Families</a>
       <div class="group" tabindex="0"><span>How to Help</span>
         <div class="sub">
           <a href="donate.html">Donate</a>
@@ -56,8 +57,8 @@
   </div>
 </header>
 
-<section class="band">
-  <div class="wrap on-green section-head"><span class="tape">Veteran Stories</span>
+<section id="main" class="band">
+  <div class="wrap on-green section-head"><h1 class="tape">Veteran Stories</h1>
     <p style="max-width:720px; margin:24px auto 0; color:#f2f0e6">Real veterans. Real healing. The community you see below is why this mission exists.</p>
   </div>
   <div class="wrap center" style="margin-top:40px">
@@ -67,7 +68,7 @@
 
 <!-- TESTIMONIALS -->
 <section class="band">
-  <div class="wrap on-green section-head"><span class="tape small">In Their Words</span></div>
+  <div class="wrap on-green section-head"><h2 class="tape small">In Their Words</h2></div>
   <div class="wrap">
     <div class="grid cols-3">
       <div class="card">
@@ -88,25 +89,25 @@
 
 <!-- GALLERY -->
 <section class="band">
-  <div class="wrap on-green section-head"><span class="tape">See Them Heal</span></div>
+  <div class="wrap on-green section-head"><h2 class="tape">See Them Heal</h2></div>
   <div class="wrap">
     <div class="gallery">
-      <div class="photo-taped"><img src="assets/gal-1.webp" alt="Aya Mission community moment" loading="lazy"></div>
-      <div class="photo-taped"><img src="assets/gal-2.webp" alt="Aya Mission community moment" loading="lazy"></div>
-      <div class="photo-taped"><img src="assets/gal-3.webp" alt="Aya Mission community moment" loading="lazy"></div>
-      <div class="photo-taped"><img src="assets/gal-4.webp" alt="Aya Mission community moment" loading="lazy"></div>
-      <div class="photo-taped"><img src="assets/gal-5.webp" alt="Aya Mission community moment" loading="lazy"></div>
-      <div class="photo-taped"><img src="assets/gal-6.webp" alt="Aya Mission community moment" loading="lazy"></div>
-      <div class="photo-taped"><img src="assets/gal-7.webp" alt="Aya Mission community moment" loading="lazy"></div>
-      <div class="photo-taped"><img src="assets/gal-8.webp" alt="Aya Mission community moment" loading="lazy"></div>
-      <div class="photo-taped"><img src="assets/gal-9.webp" alt="Aya Mission community moment" loading="lazy"></div>
+      <div class="photo-taped"><img src="assets/gal-1.webp" alt="Participants resting on mats beneath the wooden ceiling of the retreat yurt" loading="lazy"></div>
+      <div class="photo-taped"><img src="assets/gal-2.webp" alt="A support dog visiting a resting participant inside the retreat yurt" loading="lazy"></div>
+      <div class="photo-taped"><img src="assets/gal-3.webp" alt="Veterans laughing together while resting side by side in the yurt" loading="lazy"></div>
+      <div class="photo-taped"><img src="assets/gal-4.webp" alt="Desert sunset over the road leading to the retreat site" loading="lazy"></div>
+      <div class="photo-taped"><img src="assets/gal-5.webp" alt="A facilitator speaking to veterans seated in an outdoor circle at dusk" loading="lazy"></div>
+      <div class="photo-taped"><img src="assets/gal-6.webp" alt="Veterans seated among desert cactus during an outdoor group session" loading="lazy"></div>
+      <div class="photo-taped"><img src="assets/gal-7.webp" alt="A veteran seated barefoot outside the yurt in quiet reflection" loading="lazy"></div>
+      <div class="photo-taped"><img src="assets/gal-8.webp" alt="Veterans and volunteers talking together in camp chairs on the patio" loading="lazy"></div>
+      <div class="photo-taped"><img src="assets/gal-9.webp" alt="The full cohort gathered in an evening circle under desert trees" loading="lazy"></div>
     </div>
   </div>
 </section>
 
 <!-- PODCASTS -->
 <section class="band">
-  <div class="wrap on-green section-head"><span class="tape small">Listen to Them Speak</span>
+  <div class="wrap on-green section-head"><h2 class="tape small">Listen to Them Speak</h2>
     <p style="margin:18px auto 0; color:#f2f0e6; font-size:.95rem">Swipe or scroll sideways for more episodes →</p>
   </div>
   <div class="carousel-wrap">
@@ -193,5 +194,6 @@
 </footer>
 
 <script src="js/app.js" defer></script>
+<script src="js/analytics.js" defer></script>
 </body>
 </html>

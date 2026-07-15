@@ -39,12 +39,11 @@ if (evEl) {
         <div class="card">
           <h3>${esc(e.name)}</h3>
           <p>${[e.site, e.location].filter(Boolean).map(esc).join(" · ")}</p>
-          <p>${fmtRange(e.startDate, e.endDate)}${e.spotsLeft!=null ? "<br>"+spots(e.spotsLeft) : ""}</p>
+          <p>${fmtRange(e.startDate, e.endDate)}${(e.applicationsOpen||e.opensAt||e.applyOpens) ? "<br>Applications open "+fmtDate(e.applicationsOpen||e.opensAt||e.applyOpens) : ""}${e.spotsLeft!=null ? "<br>"+spots(e.spotsLeft) : ""}</p>
           <a class="btn dark" href="${APP_BASE}/apply.html?event=${encodeURIComponent(e.id)}">Apply for This Ceremony</a>
         </div>`).join("")
       : `<div class="card" style="grid-column:1/-1"><h3>New Dates Coming Soon</h3>
-           <p>Ceremony weekends are held on Memorial Day and Veterans Day weekends. You can start your application now and we'll match you to the next cohort.</p>
-           <a class="btn dark" href="${APP_BASE}/apply.html">Start an Application</a></div>`;
+           <p>Upcoming events are posted here as they're scheduled, along with the date applications open. Check back soon.</p></div>`;
     })
     .catch(() => {
       evEl.innerHTML = `<div class="card" style="grid-column:1/-1"><h3>Apply for a Ceremony</h3>

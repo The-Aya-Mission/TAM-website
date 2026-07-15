@@ -1,6 +1,6 @@
 /* Google Analytics 4 — set GA_ID to the site's measurement ID (G-XXXXXXXXXX) to enable.
    Until then this file is a no-op. */
-const GA_ID = "";
+const GA_ID = "G-L116ZRRNTY";
 if (GA_ID) {
   const s = document.createElement("script");
   s.async = true; s.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_ID;

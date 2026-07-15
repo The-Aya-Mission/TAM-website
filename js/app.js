@@ -1,7 +1,7 @@
 /* The Aya Mission — operations app integration.
    The app is a separate service; this file only links to it and reads its public API.
    Swap APP_BASE to https://apply.theayamission.org once the subdomain is set up. */
-const APP_BASE = "https://vetting-app-production.up.railway.app";
+const APP_BASE = "https://apply.theayamission.org";
 
 /* Point every <a data-app-href="/path"> at the app */
 document.querySelectorAll("[data-app-href]").forEach(a => {

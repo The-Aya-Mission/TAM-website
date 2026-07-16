@@ -1,5 +1,7 @@
 # The Aya Mission — Design Specification (Locked)
-**Version 1.0 · July 2026 · Source of truth: `css/style.css` in the TAM-website repo**
+**Version 1.1 · July 2026 · Source of truth: `css/style.css` in the TAM-website repo**
+
+> v1.1 changes: tape headlines are real `<h1>`/`<h2>` elements; mobile viewability pass (left-aligned body text, swipe rows, tighter rhythm, paper margins + tiled side tears); accessibility additions (skip link, focus outlines); operations-app integration layer (`js/app.js`, `js/analytics.js`); SEO infrastructure (sitemap, robots, smart 404).
 
 This document locks the visual system used on theayamission.org so it can be reproduced on other internal sites. Where exact values are given, use them exactly. Where assets are referenced, copy them from `/assets/` — do not recreate them.
 
@@ -91,6 +93,8 @@ No two adjacent papers or tapes may look identical:
 ### 4.4 Tape headline (`.tape`)
 `display: inline-flex; align-items: center; justify-content: center;` so text centers on the tape body. Asymmetric padding reserves room for the ragged pointed end: `.5em 2em .5em 1.35em` (mirrored on flipped variants). Background stretches `100% 100%`; `drop-shadow(0 3px 12px rgba(0,0,0,.35))`; tilt ±.5–.6°.
 
+**Markup rule (v1.1):** tape headlines are semantic headings, not spans — exactly one `<h1 class="tape">` per page (the page title), all other tapes are `<h2>`. Reset heading defaults with `h1.tape, h2.tape { margin: 0; font-weight: 400 }`.
+
 ### 4.5 Buttons
 Three types, all uppercase Quicksand 700, padding 15px 32px, hover `translateY(-2px)`:
 - **Gold** — `tape-small.svg` background, `--green-deep` text; hover swaps to `tape-small-hover.svg`.
@@ -130,9 +134,17 @@ Native `<details>/<summary>` inside a torn panel. Summary: Marcellus 1.15rem, 18
 | Section padding | 70px 0 (`section.band`); 44px 0 on mobile |
 | Wrap gutter | 24px (14px ≤700px) |
 | Grid | `repeat(auto-fit, minmax(260–320px, 1fr))`, gap 26px (44px 20px mobile — extra row gap for tape chips) |
-| Breakpoints | ≤1080px hamburger nav · ≤900px tiled mobile background · ≤700px compact paper margins/typography |
+| Breakpoints | ≤1080px hamburger nav · ≤900px tiled mobile background · ≤700px mobile comfort pass (below) |
 
 **Section rhythm:** alternate paper panels and open-green sections. Never stack two identical treatments without a header; every card grid on green gets its own tape headline.
+
+**Mobile pass (≤700px, v1.1):**
+- Body paragraphs left-align (`.torn-inner p, .card p, .section-head p, .hero p, footer .cols p`); tape headlines, `p.center`, and the stat band stay centered.
+- Rhythm tightens: `section.band` 34px 0, grid gap 34px 18px, buttons 12px 22px / .82rem.
+- Paper: `.torn` gets `margin-inline: 14px` (panels must never run edge-to-edge), border-width 30px 17px, image-width 30/20/30/16. Cards: 28px 17px, image-width 28/20/28/15, chip `top: -58px`.
+- **Side tears tile, never stretch:** `border-image-repeat: stretch round` on `.torn`, `.card`, and `.logo-panel`. Stretched side slices smear; `round` tiles natural tear bumps down tall panels.
+- Card grids that would stack 3+ deep become swipe rows: add class `m-carousel` → mobile-only `display:flex; overflow-x:auto; scroll-snap-type:x mandatory`, cards `flex: 0 0 76vw`, container `padding-top: 70px` for tape chips. Desktop grid unchanged.
+- Footer link columns go two-up; the org blurb and crisis column span full width (`grid-column: 1 / -1`).
 
 ## 7. Interaction & Motion
 
@@ -144,6 +156,14 @@ Minimal: buttons/tape-links lift 2px on hover; nav links recolor to `--gold`; dr
 - One `.lead` statement per panel; stats bold inline (`64% to 0%`).
 - Compliance line wherever ceremonies are mentioned: *"TAM provides preparation and integration support. Sacramental ceremonies are conducted by independent religious organizations."*
 - Every page ends with a green CTA section (h2 ~1.7rem + one gold button) before the footer.
+
+## 8b. Accessibility & Integration Layer (v1.1)
+
+- Every page: `<a class="skip" href="#main">Skip to content</a>` first in `<body>`; first section after the header carries `id="main"`. Skip link is visually hidden until keyboard focus.
+- Focus visibility: `a, .btn, summary, .nav-toggle-btn` get a 3px gold `:focus-visible` outline, offset 2px. Hamburger label carries `aria-label="Open menu"`.
+- Images: every image needs distinct, descriptive alt text — no repeated generic alts across a gallery.
+- `js/app.js`: single `APP_BASE` constant for the operations app (`apply.theayamission.org`); links carry both a hard `href` and `data-app-href` (rewritten on load); live widgets target `#app-events` / `#app-opportunities` and filter placeholder values (TBD/TBA/N/A). `js/analytics.js`: GA4 with custom click events (donate, app outbound, newsletter, merch).
+- SEO plumbing: one H1 per page, `sitemap.xml` + `robots.txt` at root, and a `404.html` that JS-redirects known legacy paths.
 
 ## 9. Implementation Notes
 

@@ -19,7 +19,7 @@
 <header class="site">
   <div class="nav-bar">
     <a class="brand" href="index.html"><img src="assets/logo-small.png" alt="The Aya Mission logo"><span>The Aya Mission</span></a>
-    <input type="checkbox" id="nav-toggle">
+    <input type="checkbox" id="nav-toggle" aria-label="Open menu">
     <label class="nav-toggle-btn" for="nav-toggle" aria-label="Open menu">☰</label>
     <nav class="main">
       <a href="index.html">Home</a>
@@ -111,7 +111,7 @@
     <p style="margin:18px auto 0; color:#f2f0e6; font-size:.95rem">Swipe or scroll sideways for more episodes →</p>
   </div>
   <div class="carousel-wrap">
-    <div class="carousel">
+    <div class="carousel" tabindex="0" role="region" aria-label="Podcast episodes, scroll sideways for more">
       <div class="card episode-card">
         <img class="cover" src="assets/pod-1.webp" alt="Sacred Healing podcast cover" loading="lazy">
         <h3>Sacred Healing</h3>

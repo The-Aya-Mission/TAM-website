@@ -577,3 +577,22 @@ a:focus-visible,.btn:focus-visible,summary:focus-visible,.nav-toggle-btn:focus-v
   footer .cols { grid-template-columns: 1fr 1fr; gap: 26px 18px; }
   footer .cols > div:first-child, footer .cols > div:last-child { grid-column: 1 / -1; }
 }
+
+/* ---------- mobile paper cleanup ---------- */
+@media (max-width: 700px) {
+  /* breathing room so panels read as objects on the wall */
+  .torn { margin-inline: 14px; }
+  /* side tears: wider + tiled vertically instead of stretched (kills the smear) */
+  .torn {
+    border-width: 30px 17px;
+    border-image-width: 30px 20px 30px 16px;
+    border-image-repeat: stretch round;
+  }
+  .card {
+    border-width: 28px 17px;
+    border-image-width: 28px 20px 28px 15px;
+    border-image-repeat: stretch round;
+  }
+  .card::before { top: -58px; }
+  .hero .logo-panel { border-image-repeat: stretch round; }
+}

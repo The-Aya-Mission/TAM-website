@@ -547,3 +547,33 @@ h1.tape,h2.tape{margin:0;font-weight:400}
 .skip{position:absolute;left:12px;top:12px;z-index:200;transform:translateY(-300%);background:var(--gold);color:var(--green-deep);padding:10px 18px;font-family:'Quicksand',sans-serif;font-weight:700;text-decoration:none;border-radius:6px}
 .skip:focus{transform:none}
 a:focus-visible,.btn:focus-visible,summary:focus-visible,.nav-toggle-btn:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+
+/* ---------- mobile viewability pass ---------- */
+@media (max-width: 700px) {
+  /* readable left-aligned body text; headlines/buttons stay centered */
+  .torn-inner p, .card p, .section-head p, .hero p, footer .cols p { text-align: left; }
+  p.center { text-align: center; }
+  .stat-band p, .stat-band h2 { text-align: center; }
+
+  /* tighter vertical rhythm */
+  section.band { padding: 34px 0; }
+  .grid { gap: 34px 18px; }
+  .section-head + .wrap, .wrap[style*="margin-top:40px"] { margin-top: 28px; }
+
+  /* comfortable button size */
+  .btn { padding: 12px 22px; font-size: .82rem; }
+
+  /* card grids become swipe rows */
+  .m-carousel {
+    display: flex; gap: 16px; align-items: stretch;
+    overflow-x: auto; overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
+    padding: 70px 6px 16px;
+    scrollbar-width: thin; scrollbar-color: var(--gold) rgba(0,0,0,.25);
+  }
+  .m-carousel > .card { flex: 0 0 76vw; scroll-snap-align: center; }
+
+  /* footer links in two columns; blurb + crisis full width */
+  footer .cols { grid-template-columns: 1fr 1fr; gap: 26px 18px; }
+  footer .cols > div:first-child, footer .cols > div:last-child { grid-column: 1 / -1; }
+}

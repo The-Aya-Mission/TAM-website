@@ -8,6 +8,7 @@ document.querySelectorAll("[data-app-href]").forEach(a => {
   a.href = APP_BASE + a.getAttribute("data-app-href");
 });
 
+function real(v){ return v && !/^(tbd|tba|n\/a)$/i.test(String(v).trim()); }
 function esc(s){ const d=document.createElement("div"); d.textContent=s==null?"":String(s); return d.innerHTML; }
 function fmtDate(iso){
   if(!iso) return "";
@@ -38,7 +39,7 @@ if (evEl) {
       evEl.innerHTML = list.length ? list.map(e => `
         <div class="card">
           <h3>${esc(e.name)}</h3>
-          <p>${[e.site, e.location].filter(Boolean).map(esc).join(" · ")}</p>
+          <p>${[e.site, e.location].filter(real).map(esc).join(" · ")}</p>
           <p>${fmtRange(e.startDate, e.endDate)}${(e.applicationsOpen||e.opensAt||e.applyOpens) ? "<br>Applications open "+fmtDate(e.applicationsOpen||e.opensAt||e.applyOpens) : ""}${e.spotsLeft!=null ? "<br>"+spots(e.spotsLeft) : ""}</p>
           <a class="btn dark" href="${APP_BASE}/apply.html?event=${encodeURIComponent(e.id)}">Apply for This Ceremony</a>
         </div>`).join("")
@@ -63,7 +64,7 @@ if (opEl) {
         <div class="card">
           <h3>${esc(o.title)}</h3>
           <p>${esc(o.description)}</p>
-          <p>${[o.location,o.when].filter(Boolean).map(esc).join(" · ")}${o.spotsLeft!=null ? "<br>"+spots(o.spotsLeft) : ""}</p>
+          <p>${[o.location,o.when].filter(real).map(esc).join(" · ")}${o.spotsLeft!=null ? "<br>"+spots(o.spotsLeft) : ""}</p>
           <a class="btn dark" href="${APP_BASE}/volunteer.html">Volunteer for This</a>
         </div>`).join("")
       : `<div class="card" style="grid-column:1/-1"><h3>Join the Volunteer Roster</h3>

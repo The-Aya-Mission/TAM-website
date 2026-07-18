@@ -625,7 +625,7 @@ a { color: var(--gold-link); }
 }
 .news-form input::placeholder { color: #7d7a6b; }
 .news-form input:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; border-color: var(--gold-dark); }
-.news-form .btn { border: 0; cursor: pointer; }
+.news-form .btn { border: 0; cursor: pointer; background-color: transparent; appearance: none; -webkit-appearance: none; font-family: 'Quicksand', sans-serif; }
 .news-msg { margin-top: 14px; font-size: .95rem; min-height: 1.4em; color: #f2f0e6; text-align: center; }
 .news-msg.ok { color: var(--gold-soft); font-weight: 700; }
 .news-msg.err { color: #f0b9a8; }

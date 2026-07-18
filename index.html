@@ -211,11 +211,19 @@
 </section>
 
 <!-- NEWSLETTER -->
-<section class="band">
+<section class="band" id="newsletter">
   <div class="wrap on-green center">
     <div class="section-head"><h2 class="tape small">Stay Close</h2></div>
-    <p style="margin:24px 0 20px; color:#f2f0e6">Not ready to dive in? Ceremony updates, veteran stories, and ways to help, once a month.</p>
-    <a class="btn gold" href="https://mailchi.mp/9acd1b7b15be/newsletter-signup" target="_blank" rel="noopener">Sign Up for Our Newsletter</a>
+    <p style="margin:24px 0 6px; color:#f2f0e6">Not ready to dive in? Ceremony updates, veteran stories, and ways to help, once a month.</p>
+    <form class="news-form" novalidate>
+      <div class="news-row">
+        <input type="text" name="FNAME" autocomplete="given-name" placeholder="First name (optional)" aria-label="First name">
+        <input type="email" name="EMAIL" autocomplete="email" placeholder="Your email address" aria-label="Email address" required>
+        <button type="submit" class="btn gold">Sign Up</button>
+      </div>
+      <div aria-hidden="true" style="position:absolute; left:-5000px"><input type="text" name="b_309b4cf0ce01b37b69f2729e6_7d96311c9c" tabindex="-1" value=""></div>
+      <p class="news-msg" role="status" aria-live="polite"></p>
+    </form>
   </div>
 </section>
 
@@ -251,7 +259,7 @@
         <li><a href="https://www.instagram.com/theayamission/" target="_blank" rel="noopener">Instagram</a></li>
         <li><a href="https://x.com/TheAyaMission" target="_blank" rel="noopener">X</a></li>
         <li><a href="https://www.linkedin.com/company/the-aya-mission/about" target="_blank" rel="noopener">LinkedIn</a></li>
-        <li><a href="https://mailchi.mp/9acd1b7b15be/newsletter-signup" target="_blank" rel="noopener">Newsletter</a></li>
+        <li><a href="#newsletter">Newsletter</a></li>
         <li><a href="https://aya-mission.brikl.store" target="_blank" rel="noopener">Merch Shop</a></li>
       </ul>
     </div>
@@ -265,5 +273,6 @@
 
 <script src="js/app.js" defer></script>
 <script src="js/analytics.js" defer></script>
+<script src="js/newsletter.js" defer></script>
 </body>
 </html>

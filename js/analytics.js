@@ -1,4 +1,4 @@
-/* Google Analytics 4 — set GA_ID to the site's measurement ID (G-XXXXXXXXXX) to enable.
+/* Google Analytics 4: set GA_ID to the site's measurement ID (G-XXXXXXXXXX) to enable.
    Until then this file is a no-op. */
 const GA_ID = "G-L116ZRRNTY";
 if (GA_ID) {

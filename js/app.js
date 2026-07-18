@@ -1,4 +1,4 @@
-/* The Aya Mission — operations app integration.
+/* The Aya Mission: operations app integration.
    The app is a separate service; this file only links to it and reads its public API.
    Swap APP_BASE to https://apply.theayamission.org once the subdomain is set up. */
 const APP_BASE = "https://apply.theayamission.org";
@@ -25,11 +25,11 @@ function fmtRange(a,b){
 }
 function spots(n){
   if(n==null) return "";
-  if(n<=0) return '<span class="app-spots full">Currently filled — more spots may open</span>';
+  if(n<=0) return '<span class="app-spots full">Currently filled. More spots may open</span>';
   return '<span class="app-spots">'+n+(n===1?" spot":" spots")+" left</span>";
 }
 
-/* Upcoming ceremonies — target: <div class="grid cols-3" id="app-events"></div> */
+/* Upcoming ceremonies target: <div class="grid cols-3" id="app-events"></div> */
 const evEl = document.getElementById("app-events");
 if (evEl) {
   fetch(APP_BASE + "/api/public/events")
@@ -53,7 +53,7 @@ if (evEl) {
     });
 }
 
-/* Volunteer opportunities — target: <div class="grid cols-3" id="app-opportunities"></div> */
+/* Volunteer opportunities target: <div class="grid cols-3" id="app-opportunities"></div> */
 const opEl = document.getElementById("app-opportunities");
 if (opEl) {
   fetch(APP_BASE + "/api/public/opportunities")
@@ -68,7 +68,7 @@ if (opEl) {
           <a class="btn dark" href="${APP_BASE}/volunteer.html">Volunteer for This</a>
         </div>`).join("")
       : `<div class="card" style="grid-column:1/-1"><h3>Join the Volunteer Roster</h3>
-           <p>No open roles this second — but retreats staff up fast. Register once and we'll reach out when the next cohort needs you.</p>
+           <p>No open roles this second, but retreats staff up fast. Register once and we'll reach out when the next cohort needs you.</p>
            <a class="btn dark" href="${APP_BASE}/volunteer.html">Register to Volunteer</a></div>`;
     })
     .catch(() => {

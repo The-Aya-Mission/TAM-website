@@ -635,3 +635,17 @@ a { color: var(--gold-link); }
 .candid-seal { display: inline-block; text-decoration: none !important; transition: transform .15s ease; }
 .candid-seal:hover { transform: translateY(-2px); }
 .candid-seal img { display: block; }
+
+/* donate trust strip */
+.trust-strip {
+  display: flex; gap: 18px; align-items: center; text-align: left;
+  max-width: 620px; margin: 26px auto 0; padding: 16px 20px;
+  background: var(--paper-dim); border: 1px solid #d8d3c2; border-radius: 8px;
+}
+.trust-strip img { display: block; border: 1px solid #d8d3c2; }
+.trust-strip strong { font-size: .95rem; letter-spacing: .03em; }
+.trust-strip p { font-size: .88rem; color: #5a5748; margin: 5px 0 0; line-height: 1.55; }
+@media (max-width: 700px) {
+  .trust-strip { flex-direction: column; text-align: center; gap: 12px; }
+  .trust-strip p { text-align: left; }
+}

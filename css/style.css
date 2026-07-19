@@ -630,3 +630,8 @@ a { color: var(--gold-link); }
 .news-msg.ok { color: var(--gold-soft); font-weight: 700; }
 .news-msg.err { color: #f0b9a8; }
 @media (max-width: 700px) { .news-row { flex-direction: column; } .news-form .btn { width: 100%; } }
+
+/* Candid transparency seal */
+.candid-seal { display: inline-block; text-decoration: none !important; transition: transform .15s ease; }
+.candid-seal:hover { transform: translateY(-2px); }
+.candid-seal img { display: block; }

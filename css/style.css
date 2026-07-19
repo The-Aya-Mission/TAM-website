@@ -649,3 +649,12 @@ a { color: var(--gold-link); }
   .trust-strip { flex-direction: column; text-align: center; gap: 12px; }
   .trust-strip p { text-align: left; }
 }
+
+/* zeffy v2 embed framing */
+.zeffy-wrap {
+  max-width: 720px; margin: 0 auto;
+  border: 1px solid #d8d3c2; border-radius: 10px; overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 14px rgba(0,0,0,.08);
+}
+.zeffy-wrap iframe { display: block; }

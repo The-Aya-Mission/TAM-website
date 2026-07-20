@@ -629,7 +629,7 @@ a { color: var(--gold-link); }
 .news-msg { margin-top: 14px; font-size: .95rem; min-height: 1.4em; color: #f2f0e6; text-align: center; }
 .news-msg.ok { color: var(--gold-soft); font-weight: 700; }
 .news-msg.err { color: #f0b9a8; }
-@media (max-width: 700px) { .news-row { flex-direction: column; } .news-form .btn { width: 100%; } }
+@media (max-width: 700px) { .news-row { flex-direction: column; } .news-form input[type="email"], .news-form input[type="text"] { flex: 0 0 auto; width: 100%; box-sizing: border-box; } .news-form .btn { width: 100%; } }
 
 /* Candid transparency seal */
 .candid-seal { display: inline-block; text-decoration: none !important; transition: transform .15s ease; }

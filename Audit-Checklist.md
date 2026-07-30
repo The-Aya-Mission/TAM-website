@@ -7,7 +7,7 @@
 - ✅ Header button changed from "Be the Bridge" to Apply for Support
 - ✅ Newsletter signup in footer of every page
 - ✅ Real dates in Upcoming Events (live API + registration open/close windows)
-- ⬜ Fix testimonials: remove leading ellipses, start at full sentences, label or replace Ulises' quote, add branch of service, aim for three branches — **needs quotes/branch info from Joel**
+- 🟡 Fix testimonials: ellipses removed ✅ · Ulises quote labeled ✅ · still open: branch-of-service labels + third participant quote from a different branch — **needs quotes/branch info from Joel**
 - ✅ Cut navigation from 15 destinations to 5
 - ⬜ Add cost, eligibility, and timeline to program page — **needs Joel's answers** (the loudest silence on the site, per audit)
 - ⬜ Turn outcome statistics into charts — **Claude can build** pre/post PHQ-9/GAD-7 bar chart on request
@@ -21,7 +21,7 @@
 - 🟡 Mobile readability: paragraph caps ✅ · four-comma opener fixed ✅ · podcast row vertical on mobile ⬜ (*note: audit disagrees with the swipe carousels we built — Joel's call*) · 8-item inclusions list into 3 labeled clusters ⬜
 - ✅ CTAs: header button · footer newsletter · program page closes with application · stories warm-reader closing (Apply + Fund the Next Cohort + newsletter pointer) · one-gold-primary-per-page pass done on all 16 pages · "Be the Bridge" renamed "Fund the Next Cohort" on impact/stories
 - 🟡 Color: alternating bands — already satisfied by paper/green rhythm · gold reserved for clickable only ⬜ (*recommend skipping: conflicts with the tape-headline design system; discuss before doing*)
-- 🟡 Trust signals in writing: em dashes removed ✅ · testimonial ellipses ⬜ · Ulises quote label ⬜ · differentiate homepage vs program-page arc wording 🟡 (similar but not word-for-word)
+- ✅ Trust signals in writing: em dashes removed · all 12 flagged lines from the audit's table rewritten or cut (arc-of-care slogan, Real veterans Real healing, surrounds-it, three-beat patterns, Your story could be next, Join Us in the Fight → Join Us in Our Mission, ✺ glyphs removed) · testimonial ellipses stripped · Ulises quote labeled Co-Founder & ED on his own first ceremony
 - ⬜ Safety & screening section on program page (~150 words: who reviews, disqualifying conditions, medical staff present, emergency protocol, code of ethics, "some applicants are not accepted") — **Claude can draft; specifics from Joel/app team**
 
 ## Homepage

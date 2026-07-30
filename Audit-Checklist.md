@@ -39,7 +39,7 @@
 - ✅ Opening rewritten to audit's copy
 - ✅ Closing CTA is now the application (resources demoted)
 - ✅ Learn More band routes the deep pages
-- 🟡 Naming: nav says "The Program" ✅ · apply button at top of page ✅ · page still headlined "Program Overview" ⬜
+- ✅ Naming: nav "The Program" · apply button at top · page retitled "The Veteran Program" (h1, browser title, social tags)
 - ⬜ Cost / eligibility / timeline block — **Joel**
 - ✅ DD-214 one-liner: encrypted, never shared, deleted 90 days after the event (program page + mirrored in privacy policy)
 - ⬜ Move origin-story sentence ("They went alone...") to homepage
@@ -66,5 +66,5 @@
 
 ---
 
-**Fastest next moves for Claude (no input needed):** outcomes chart + program-arc diagram, inclusions list clustering, acronym pass, "Program Overview" retitle.
+**Fastest next moves for Claude (no input needed):** outcomes chart + program-arc diagram, inclusions list clustering, acronym pass.
 **Blocked on Joel:** cost/eligibility/timeline, testimonial quotes + branches, photo dates/captions, safety-section specifics, Maria's and Ulises' content.

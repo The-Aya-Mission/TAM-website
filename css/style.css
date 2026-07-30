@@ -679,3 +679,6 @@ a { color: var(--gold-link); }
 .trust-bar p { font-size: .88rem; color: #cfcaba; margin: 0; text-align: left; line-height: 1.6; }
 .trust-bar a { color: var(--gold); }
 @media (max-width: 700px) { .trust-bar { flex-direction: column; gap: 10px; } .trust-bar p { text-align: center; } }
+
+/* retreat inclusions clusters */
+.incl-group h3 { font-size: 1.05rem; letter-spacing: .06em; margin-bottom: 10px; color: var(--ink); }

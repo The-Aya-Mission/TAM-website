@@ -23,6 +23,14 @@ function fmtRange(a,b){
     return da.toLocaleDateString("en-US",{month:"long",day:"numeric"})+"–"+db.getDate()+", "+db.getFullYear();
   return fmtDate(a)+" – "+fmtDate(b);
 }
+function regInfo(e){
+  var out = "";
+  var opens = e.registrationOpens || e.applicationsOpen || e.opensAt || e.applyOpens;
+  if (e.registration === "upcoming" && opens) out += "<br>Applications open " + fmtDate(opens);
+  if (e.registrationCloses) out += '<br><span class="app-spots">Registration closes ' + fmtDate(e.registrationCloses) + "</span>";
+  if (e.registration === "closed") out += '<br><span class="app-spots full">Registration closed</span>';
+  return out;
+}
 function spots(n){
   if(n==null) return "";
   if(n<=0) return '<span class="app-spots full">Currently filled. More spots may open</span>';
@@ -40,7 +48,7 @@ if (evEl) {
         <div class="card">
           <h3>${esc(e.name)}</h3>
           <p>${[e.site, e.location].filter(real).map(esc).join(" · ")}</p>
-          <p>${fmtRange(e.startDate, e.endDate)}${(e.applicationsOpen||e.opensAt||e.applyOpens) ? "<br>Applications open "+fmtDate(e.applicationsOpen||e.opensAt||e.applyOpens) : ""}${e.spotsLeft!=null ? "<br>"+spots(e.spotsLeft) : ""}</p>
+          <p>${fmtRange(e.startDate, e.endDate)}${regInfo(e)}${e.spotsLeft!=null ? "<br>"+spots(e.spotsLeft) : ""}</p>
           <a class="btn dark" href="${APP_BASE}/apply.html?event=${encodeURIComponent(e.id)}">Apply for This Ceremony</a>
         </div>`).join("")
       : `<div class="card" style="grid-column:1/-1"><h3>New Dates Coming Soon</h3>

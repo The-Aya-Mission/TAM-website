@@ -12,7 +12,8 @@ if (GA_ID) {
   document.addEventListener("click", function(e){
     const a = e.target.closest("a"); if (!a) return;
     const h = a.href || "";
-    if (a.classList.contains("btn-donate") || h.indexOf("donate.html") > -1) gtag("event","donate_click",{link_url:h});
+    if (h.indexOf("donate.html") > -1) gtag("event","donate_click",{link_url:h});
+    else if (a.classList.contains("btn-donate")) gtag("event","apply_click",{link_url:h});
     else if (h.indexOf("apply.theayamission.org") > -1) gtag("event","app_outbound",{link_url:h,link_text:(a.textContent||"").trim().slice(0,60)});
     else if (h.indexOf("mailchi.mp") > -1) gtag("event","newsletter_click");
     else if (h.indexOf("brikl.store") > -1) gtag("event","merch_click");

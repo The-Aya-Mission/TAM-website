@@ -30,7 +30,7 @@
 - ✅ Stat sources added (VA reports); "That's why help can't wait" closing line cut
 - ✅ Outcomes rewritten as "What We've Measured So Far" with sample framing + limitation + See Full Outcomes link
 - ✅ Events section shows real dates
-- ⬜ Hero subhead rewrite (audit's proposed copy; move 501(c)(3) line to a trust bar lower on page)
+- ✅ Hero subhead rewritten to audit's copy; 501(c)(3) + EIN + Candid moved to slim trust bar before donate section; hero CTAs now See How the Program Works / Read Veteran Stories
 - ⬜ Newsletter block copy swap ("One email a month... Unsubscribe anytime")
 - ⬜ Fourth "Your Next Step" card: Get the monthly update
 
@@ -66,5 +66,5 @@
 
 ---
 
-**Fastest next moves for Claude (no input needed):** outcomes chart + program-arc diagram, homepage hero subhead rewrite + trust bar, newsletter copy swap + fourth pathway card, inclusions list clustering, acronym pass, "Program Overview" retitle.
+**Fastest next moves for Claude (no input needed):** outcomes chart + program-arc diagram, newsletter copy swap + fourth pathway card, inclusions list clustering, acronym pass, "Program Overview" retitle.
 **Blocked on Joel:** cost/eligibility/timeline, testimonial quotes + branches, photo dates/captions, safety-section specifics, Maria's and Ulises' content.

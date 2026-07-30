@@ -18,7 +18,7 @@
 - ✅ Nav collapse, Contact/Sign-In to footer only, footer Explore cut to 6
 - 🟡 Photography: hero photo ✅ · three faces spaced through homepage ⬜ · gallery captions with date + context ⬜ (**needs dates from Joel**)
 - ⬜ Research as visuals: outcomes chart (Claude) · program-arc timeline diagram (Claude) · demographics breakdown (**needs data**) · funds-allocation chart for donate (**needs budget split**) · research team photo (**needs photo**)
-- 🟡 Mobile readability: paragraph caps ✅ · four-comma opener fixed ✅ · podcast row vertical on mobile ⬜ (*note: audit disagrees with the swipe carousels we built — Joel's call*) · 8-item inclusions list into 3 labeled clusters ⬜
+- 🟡 Mobile readability: paragraph caps ✅ · four-comma opener fixed ✅ · podcast row vertical on mobile ⬜ (*note: audit disagrees with the swipe carousels we built — Joel's call*) · inclusions list in 3 labeled clusters ✅
 - ✅ CTAs: header button · footer newsletter · program page closes with application · stories warm-reader closing (Apply + Fund the Next Cohort + newsletter pointer) · one-gold-primary-per-page pass done on all 16 pages · "Be the Bridge" renamed "Fund the Next Cohort" on impact/stories
 - 🟡 Color: alternating bands — already satisfied by paper/green rhythm · gold reserved for clickable only ⬜ (*recommend skipping: conflicts with the tape-headline design system; discuss before doing*)
 - ✅ Trust signals in writing: em dashes removed · all 12 flagged lines from the audit's table rewritten or cut (arc-of-care slogan, Real veterans Real healing, surrounds-it, three-beat patterns, Your story could be next, Join Us in the Fight → Join Us in Our Mission, ✺ glyphs removed) · testimonial ellipses stripped · Ulises quote labeled Co-Founder & ED on his own first ceremony
@@ -66,5 +66,5 @@
 
 ---
 
-**Fastest next moves for Claude (no input needed):** outcomes chart + program-arc diagram, inclusions list clustering, acronym pass.
+**Fastest next moves for Claude (no input needed):** outcomes chart + program-arc diagram, acronym pass.
 **Blocked on Joel:** cost/eligibility/timeline, testimonial quotes + branches, photo dates/captions, safety-section specifics, Maria's and Ulises' content.

@@ -5,6 +5,7 @@
    ========================================================== */
 
 :root {
+  color-scheme: only light;
   --green-deep: #0e1f15;
   --green: #16301f;
   --green-mid: #1d3a28;

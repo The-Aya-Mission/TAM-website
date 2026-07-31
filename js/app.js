@@ -27,7 +27,7 @@ function regInfo(e){
   var out = "";
   var opens = e.registrationOpens || e.applicationsOpen || e.opensAt || e.applyOpens;
   if (e.registration === "upcoming" && opens) out += "<br>Applications open " + fmtDate(opens);
-  if (e.registrationCloses) out += '<br><span class="app-spots">Registration closes ' + fmtDate(e.registrationCloses) + "</span>";
+  if (e.registrationCloses) out += "<br>Registration closes " + fmtDate(e.registrationCloses);
   if (e.registration === "closed") out += '<br><span class="app-spots full">Registration closed</span>';
   return out;
 }

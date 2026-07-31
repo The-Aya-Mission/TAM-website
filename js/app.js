@@ -57,7 +57,7 @@ if (evEl) {
     .catch(() => {
       evEl.innerHTML = `<div class="card" style="grid-column:1/-1"><h3>Apply for a Ceremony</h3>
         <p>See upcoming ceremony weekends and begin your application on our secure intake portal.</p>
-        <a class="btn dark" href="${APP_BASE}/apply.html">Open the Application Portal</a></div>`;
+        <a class="btn dark" href="${APP_BASE}/interest.html">Open the Application Portal</a></div>`;
     });
 }
 

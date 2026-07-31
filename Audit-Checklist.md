@@ -9,7 +9,7 @@
 - ✅ Real dates in Upcoming Events (live API + registration open/close windows)
 - 🟡 Fix testimonials: ellipses removed ✅ · Ulises quote labeled ✅ · still open: branch-of-service labels + third participant quote from a different branch — **needs quotes/branch info from Joel**
 - ✅ Cut navigation from 15 destinations to 5
-- ⬜ Add cost, eligibility, and timeline to program page — **needs Joel's answers** (the loudest silence on the site, per audit)
+- ✅ Cost, eligibility, and timeline block added to program page (two-part cost + assistance note, dual screening + inner circle + Gold Star, full step-by-step timeline); FAQ cost answer aligned
 - ⬜ Turn outcome statistics into charts — **Claude can build** pre/post PHQ-9/GAD-7 bar chart on request
 - ✅ Break up every paragraph over three sentences
 
@@ -40,7 +40,7 @@
 - ✅ Closing CTA is now the application (resources demoted)
 - ✅ Learn More band routes the deep pages
 - ✅ Naming: nav "The Program" · apply button at top · page retitled "The Veteran Program" (h1, browser title, social tags)
-- ⬜ Cost / eligibility / timeline block — **Joel**
+- ✅ Cost / eligibility / timeline block added after Upcoming Events
 - ✅ DD-214 one-liner: encrypted, never shared, deleted 90 days after the event (program page + mirrored in privacy policy)
 - ✅ Origin-story lines added to homepage as narrative bridge between stat band and outcomes (kept on program page too)
 
@@ -67,4 +67,4 @@
 ---
 
 **Fastest next moves for Claude (no input needed):** outcomes chart + program-arc diagram, acronym pass.
-**Blocked on Joel:** cost/eligibility/timeline, testimonial quotes + branches, photo dates/captions, safety-section specifics, Maria's and Ulises' content.
+**Blocked on Joel:** testimonial quotes + branches, photo dates/captions, safety-section specifics, Maria's and Ulises' content.

@@ -538,7 +538,7 @@ label.nav-toggle-btn { order: 4; }
 .carousel .btn { margin-top: 10px; padding: 10px 18px; font-size: .76rem; }
 
 /* app integration */
-.app-spots{font-weight:700;color:var(--gold-dark)}
+.app-spots{font-weight:700;color:var(--ink-soft)}
 .app-spots.full{color:#7a2f1f}
 
 /* real headings styled as tape (SEO fix) */
@@ -602,7 +602,7 @@ a:focus-visible,.btn:focus-visible,summary:focus-visible,.nav-toggle-btn:focus-v
 /* 1. link contrast on light backgrounds (4.5:1+) */
 :root { --gold-link: #7a5f1f; }
 a { color: var(--gold-link); }
-.app-spots { color: var(--gold-link); }
+.app-spots { color: var(--ink-soft); }
 
 /* 3. inline links distinguishable by more than color */
 .torn-inner p a, .card p a, footer .fine a, .prose a { text-decoration: underline; text-underline-offset: 2px; }

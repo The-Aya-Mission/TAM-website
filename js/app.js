@@ -55,9 +55,9 @@ if (evEl) {
            <p>Upcoming events are posted here as they're scheduled, along with the date applications open. Check back soon.</p></div>`;
     })
     .catch(() => {
-      evEl.innerHTML = `<div class="card" style="grid-column:1/-1"><h3>Apply for a Ceremony</h3>
-        <p>See upcoming ceremony weekends and begin your application on our secure intake portal.</p>
-        <a class="btn dark" href="${APP_BASE}/interest.html">Open the Application Portal</a></div>`;
+      evEl.innerHTML = `<div class="card" style="grid-column:1/-1"><h3>Get on Our Radar</h3>
+        <p>Tell us you're interested and we'll let you know when the next retreat opens for registration. Two minutes, no commitment.</p>
+        <a class="btn dark" href="${APP_BASE}/interest.html">Get Started</a></div>`;
     });
 }
 

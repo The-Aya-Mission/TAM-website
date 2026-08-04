@@ -11,7 +11,10 @@
     var full = String(st.story || "");
     var long = full.length > 240;
     var shown = long ? full.slice(0, 220).replace(/\s+\S*$/, "") + "..." : full;
-    var photo = (st.photos && st.photos[0]) ? '<div class="photo-taped" style="max-width:200px; margin:16px auto 0"><img src="' + esc2(st.photos[0]) + '" alt="Photo shared with this story" loading="lazy"></div>' : "";
+    var p0 = st.photos && st.photos[0];
+    var purl = p0 ? (typeof p0 === "string" ? p0 : p0.url) : "";
+    if (purl && purl.charAt(0) === "/") purl = APP_BASE + purl;
+    var photo = purl ? '<div class="photo-taped" style="max-width:200px; margin:16px auto 0"><img src="' + esc2(purl) + '" alt="Photo shared with this story" loading="lazy"></div>' : "";
     return '<div class="card story-card">'
       + '<p class="quote" data-full="' + esc2(full) + '">"' + esc2(shown) + '"</p>'
       + (long ? '<button class="read-more" type="button">Read more</button>' : "")

@@ -699,3 +699,7 @@ a { color: var(--gold-link); }
 /* story bank */
 .read-more { background: none; border: 0; color: var(--gold-link); font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: .88rem; cursor: pointer; padding: 0; margin: 6px 0 10px; text-decoration: underline; text-underline-offset: 2px; }
 .story-card .quote-by { margin-top: 10px; }
+
+/* story wall load-in */
+#story-wall { min-height: 300px; opacity: 0; transition: opacity .45s ease; }
+#story-wall.stories-in { opacity: 1; }

@@ -31,15 +31,26 @@
       });
     });
   }
+  var FALLBACK = [
+    {byline:"SGT Michael Telles", story:"The Aya Mission opened doors for me so that I could unpack all the trauma from combat."},
+    {byline:"SSG Ulises Lopez, Co-Founder & Executive Director, on his own first ceremony", story:"I felt the weight of the world leaving my shoulders. Although the pain still lingers, I am hopeful for the future."},
+    {byline:"SGT Andrew \"Doc\" Lunsford", story:"I feel that I can love my family more deeply. I feel like a new man."}
+  ];
+  function showWall(list){
+    var wall = document.getElementById("story-wall");
+    if (!wall) return;
+    wall.innerHTML = list.map(card).join("");
+    wire(wall);
+    wall.classList.add("stories-in");
+  }
   fetch(APP_BASE + "/api/public/stories")
     .then(function(r){ if(!r.ok) throw 0; return r.json(); })
     .then(function(data){
       var list = (data && Array.isArray(data.stories)) ? data.stories.slice() : [];
-      if (!list.length) return; // keep hardcoded fallbacks
+      if (!list.length) { showWall(FALLBACK); return; }
       list.sort(function(a,b){ return String(b.at||"").localeCompare(String(a.at||"")); });
 
-      var wall = document.getElementById("story-wall");
-      if (wall) { wall.innerHTML = list.map(card).join(""); wire(wall); }
+      showWall(list);
 
       var words = document.getElementById("live-words");
       if (words) {
@@ -54,5 +65,5 @@
         imp.innerHTML = pick.map(card).join(""); wire(imp);
       }
     })
-    .catch(function(){ /* hardcoded quotes remain */ });
+    .catch(function(){ showWall(FALLBACK); });
 })();

@@ -36,12 +36,32 @@
     {byline:"SSG Ulises Lopez, Co-Founder & Executive Director, on his own first ceremony", story:"I felt the weight of the world leaving my shoulders. Although the pain still lingers, I am hopeful for the future."},
     {byline:"SGT Andrew \"Doc\" Lunsford", story:"I feel that I can love my family more deeply. I feel like a new man."}
   ];
+  var PAGE = 6;
+  function shuffle(a){
+    for (var i = a.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var t = a[i]; a[i] = a[j]; a[j] = t;
+    }
+    return a;
+  }
   function showWall(list){
     var wall = document.getElementById("story-wall");
     if (!wall) return;
-    wall.innerHTML = list.map(card).join("");
-    wire(wall);
+    var pool = shuffle(list.slice());
+    var shown = 0;
+    function renderMore(){
+      var batch = pool.slice(shown, shown + PAGE);
+      shown += batch.length;
+      wall.insertAdjacentHTML("beforeend", batch.map(card).join(""));
+      wire(wall);
+      var btn = document.getElementById("more-stories");
+      if (btn) btn.style.display = (shown < pool.length) ? "" : "none";
+    }
+    wall.innerHTML = "";
+    renderMore();
     wall.classList.add("stories-in");
+    var btn = document.getElementById("more-stories");
+    if (btn) btn.addEventListener("click", renderMore);
   }
   fetch(APP_BASE + "/api/public/stories")
     .then(function(r){ if(!r.ok) throw 0; return r.json(); })

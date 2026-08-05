@@ -2,6 +2,7 @@
 (function(){
   function esc2(s){ var d=document.createElement("div"); d.textContent=s==null?"":String(s); return d.innerHTML; }
   function att(st){
+    if (st.byline) return esc2(st.byline);
     var who = st.anonymous ? "" : (st.name || "");
     var mil = [st.rank, st.service].filter(Boolean).join(", ");
     var parts = [who, mil, st.state].filter(Boolean);

@@ -663,7 +663,7 @@ a { color: var(--gold-link); }
 /* footer newsletter */
 .footer-news { margin-top: 18px; max-width: 260px; }
 .footer-news .foot-news-label { font-size: .88rem; color: #ddd8c9; margin-bottom: 8px; }
-.footer-news input[type="email"] {
+.footer-news input[type="email"], .footer-news input[type="text"] {
   width: 100%; box-sizing: border-box;
   font-family: 'Quicksand', sans-serif; font-size: .95rem; font-weight: 500;
   color: var(--ink); background: var(--paper);

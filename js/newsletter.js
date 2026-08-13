@@ -1,38 +1,81 @@
-/* On-brand Mailchimp signup: posts via JSONP so visitors never leave the site. */
-(function(){
-  var URL = "https://theayamission.us12.list-manage.com/subscribe/post-json?u=309b4cf0ce01b37b69f2729e6&id=7d96311c9c&f_id=00246ae9f0";
-  document.querySelectorAll("form.news-form").forEach(function(form){
-    form.addEventListener("submit", function(e){
+/* Newsletter sign-up.
+   This used to post straight to Mailchimp's public subscribe URL. That URL works from anything
+   that can make a web request, browser or not, so scripts were adding junk contacts to the list
+   all day. It now posts to our own server, which holds the Mailchimp key, checks the sign-up,
+   and adds the person from its side. Nothing here reveals a Mailchimp address any more.
+
+   Three quiet checks travel with every sign-up: a signed token the server issues when the page
+   loads (so a script cannot post without asking first, and cannot reuse one), the time between
+   the page loading and the form being sent (a person takes seconds, a script takes none), and
+   two hidden fields that only an automated filler will touch. */
+(function () {
+  var API = "https://apply.theayamission.org";
+  var TOKEN = null;
+
+  fetch(API + "/api/public/form-token")
+    .then(function (r) { return r.json(); })
+    .then(function (d) { TOKEN = d.token; })
+    .catch(function () { /* the server decides what to do with a missing token */ });
+
+  document.querySelectorAll("form.news-form").forEach(function (form) {
+    // A second honeypot, added here so the markup on every page stays as it is.
+    var hp2 = document.createElement("div");
+    hp2.setAttribute("aria-hidden", "true");
+    hp2.style.cssText = "position:absolute;left:-5000px";
+    hp2.innerHTML = '<label>Company<input type="text" name="company" tabindex="-1" autocomplete="off" value=""></label>';
+    form.appendChild(hp2);
+
+    form.addEventListener("submit", function (e) {
       e.preventDefault();
       var email = form.querySelector('input[name="EMAIL"]').value.trim();
-      var fname = (form.querySelector('input[name="FNAME"]') || {value:""}).value.trim();
-      var hp = form.querySelector('input[name^="b_"]').value; // honeypot
+      var fname = (form.querySelector('input[name="FNAME"]') || { value: "" }).value.trim();
+      var lname = (form.querySelector('input[name="LNAME"]') || { value: "" }).value.trim();
+      var hp = (form.querySelector('input[name^="b_"]') || { value: "" }).value;
       var msg = form.querySelector(".news-msg");
       var btn = form.querySelector("button, input[type=submit]");
+      // A real name is asked for now. Scripts fill one box and move on, and a list of people
+      // with names is worth far more to us than a list of addresses.
+      if (!fname || !lname) {
+        msg.textContent = "Please enter your first and last name.";
+        msg.className = "news-msg err";
+        (fname ? form.querySelector('input[name="LNAME"]') : form.querySelector('input[name="FNAME"]')).focus();
+        return;
+      }
       if (!email) return;
-      btn.disabled = true; msg.textContent = "One moment..."; msg.className = "news-msg";
-      var cb = "mcCallback" + Date.now();
-      window[cb] = function(data){
-        btn.disabled = false;
-        var clean = String(data.msg || "").replace(/<[^>]*>/g, "").replace(/^\d+\s*-\s*/, "");
-        if (data.result === "success") {
-          msg.textContent = "You're in. Welcome to the mission.";
-          msg.className = "news-msg ok";
-          form.reset();
-          if (window.gtag) gtag("event", "newsletter_signup");
-        } else {
-          msg.textContent = clean || "Something went wrong. Please try again.";
+      btn.disabled = true;
+      msg.textContent = "One moment...";
+      msg.className = "news-msg";
+
+      fetch(API + "/api/public/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email: email,
+          firstName: fname,
+          lastName: lname,
+          website: hp,
+          company: hp2.querySelector("input").value,
+          formToken: TOKEN
+        })
+      })
+        .then(function (r) { return r.json().then(function (d) { return { ok: r.ok, d: d }; }); })
+        .then(function (res) {
+          btn.disabled = false;
+          if (res.ok && res.d && res.d.ok) {
+            msg.textContent = res.d.duplicate ? "You are already on the list. Thank you." : "You're in. Welcome to the mission.";
+            msg.className = "news-msg ok";
+            form.reset();
+            if (window.gtag) gtag("event", "newsletter_signup");
+          } else {
+            msg.textContent = (res.d && res.d.error) || "Something went wrong. Please try again.";
+            msg.className = "news-msg err";
+          }
+        })
+        .catch(function () {
+          btn.disabled = false;
+          msg.textContent = "Connection issue. Please try again.";
           msg.className = "news-msg err";
-        }
-        delete window[cb]; s.remove();
-      };
-      var s = document.createElement("script");
-      s.src = URL + "&EMAIL=" + encodeURIComponent(email)
-                  + (fname ? "&FNAME=" + encodeURIComponent(fname) : "")
-                  + "&b_309b4cf0ce01b37b69f2729e6_7d96311c9c=" + encodeURIComponent(hp)
-                  + "&c=" + cb;
-      s.onerror = function(){ btn.disabled = false; msg.textContent = "Connection issue. Please try again."; msg.className = "news-msg err"; delete window[cb]; s.remove(); };
-      document.body.appendChild(s);
+        });
     });
   });
 })();

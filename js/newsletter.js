@@ -46,6 +46,8 @@
       msg.textContent = "One moment...";
       msg.className = "news-msg";
 
+      // Where this visit came from, so a sign-up can be attributed to the thing that produced it.
+      var q = new URLSearchParams(window.location.search);
       fetch(API + "/api/public/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -55,6 +57,9 @@
           lastName: lname,
           website: hp,
           company: hp2.querySelector("input").value,
+          utm_source: q.get("utm_source") || "",
+          utm_medium: q.get("utm_medium") || "",
+          utm_campaign: q.get("utm_campaign") || "",
           formToken: TOKEN
         })
       })

@@ -9,8 +9,17 @@
    the page loading and the form being sent (a person takes seconds, a script takes none), and
    two hidden fields that only an automated filler will touch. */
 (function () {
-  var API = "https://apply.theayamission.org";
+  var API = APP_BASE; // shared constant from app.js, which loads first on every page
   var TOKEN = null;
+
+  // Hold the submit buttons for the first 2 seconds after load. The server refuses
+  // instant submissions as bot traffic; this makes that floor unbeatable by an honest
+  // visitor using autofill, who would otherwise see a success that never happened.
+  var READY_AT = Date.now() + 2000;
+  document.querySelectorAll("form.news-form button[type=submit], form.news-form input[type=submit]").forEach(function (b) {
+    b.disabled = true;
+    setTimeout(function () { b.disabled = false; }, 2000);
+  });
 
   fetch(API + "/api/public/form-token")
     .then(function (r) { return r.json(); })

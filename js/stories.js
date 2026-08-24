@@ -33,7 +33,7 @@
   }
   var FALLBACK = [
     {byline:"SGT Michael Telles", story:"The Aya Mission opened doors for me so that I could unpack all the trauma from combat."},
-    {byline:"SSG Ulises Lopez, Co-Founder & Executive Director, on his own first ceremony", story:"I felt the weight of the world leaving my shoulders. Although the pain still lingers, I am hopeful for the future."},
+    {byline:"SSG Ulises Lopez, Founder, on his own first ceremony", story:"I felt the weight of the world leaving my shoulders. Although the pain still lingers, I am hopeful for the future."},
     {byline:"SGT Andrew \"Doc\" Lunsford", story:"I feel that I can love my family more deeply. I feel like a new man."}
   ];
   var PAGE = 6;

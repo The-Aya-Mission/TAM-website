@@ -703,3 +703,8 @@ a { color: var(--gold-link); }
 /* story wall load-in */
 #story-wall { min-height: 300px; opacity: 0; transition: opacity .45s ease; }
 #story-wall.stories-in { opacity: 1; }
+
+/* merch storefront */
+.merch-card .photo-taped { max-width: 230px; margin: 0 auto 16px; }
+.merch-card h3 { margin-top: 6px; }
+.merch-price { font-family: 'Marcellus', serif; font-size: 1.35rem; color: var(--ink); margin: 2px 0 8px; }

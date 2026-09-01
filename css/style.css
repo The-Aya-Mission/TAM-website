@@ -708,3 +708,6 @@ a { color: var(--gold-link); }
 .merch-card .photo-taped { max-width: 230px; margin: 0 auto 16px; }
 .merch-card h3 { margin-top: 6px; }
 .merch-price { font-family: 'Marcellus', serif; font-size: 1.35rem; color: var(--ink); margin: 2px 0 8px; }
+
+/* story cards size to their content instead of stretching to the tallest in the row */
+#story-wall, #live-words, #live-words-impact { align-items: start; }

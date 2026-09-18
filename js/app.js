@@ -39,9 +39,12 @@ function spots(n){
 
 /* Upcoming ceremonies target: <div class="grid cols-3" id="app-events"></div> */
 const evEl = document.getElementById("app-events");
+function fetchEvents(){
+  return fetch(APP_BASE + "/api/public/events").then(r => { if(!r.ok) throw 0; return r.json(); });
+}
 if (evEl) {
-  fetch(APP_BASE + "/api/public/events")
-    .then(r => { if(!r.ok) throw 0; return r.json(); })
+  fetchEvents()
+    .catch(() => new Promise(res => setTimeout(res, 2500)).then(fetchEvents))
     .then(events => {
       const list = (Array.isArray(events)?events:[]).filter(e => !e.private);
       evEl.innerHTML = list.length ? list.map(e => `
@@ -49,7 +52,7 @@ if (evEl) {
           <h3>${esc(e.name)}</h3>
           <p>${[e.site, e.location].filter(real).map(esc).join(" · ")}</p>
           <p>${fmtRange(e.startDate, e.endDate)}${regInfo(e)}${e.spotsLeft!=null ? "<br>"+spots(e.spotsLeft) : ""}</p>
-          <a class="btn dark" href="${APP_BASE}/apply.html?event=${encodeURIComponent(e.id)}">Apply for This Ceremony</a>
+          ${e.registration === "closed" ? "" : `<a class="btn dark" href="${APP_BASE}/apply.html?event=${encodeURIComponent(e.id)}">Apply for This Ceremony</a>`}
         </div>`).join("")
       : `<div class="card" style="grid-column:1/-1"><h3>New Dates Coming Soon</h3>
            <p>Upcoming events are posted here as they're scheduled, along with the date applications open. Check back soon.</p></div>`;

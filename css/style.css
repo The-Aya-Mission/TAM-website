@@ -717,7 +717,7 @@ a { color: var(--gold-link); }
 #tam-popup .popup-overlay { position: fixed; inset: 0; background: rgba(8,18,12,.72); z-index: 400; }
 #tam-popup .popup-note {
   position: fixed; z-index: 401; left: 50%; top: 50%; transform: translate(-50%,-50%) rotate(-.6deg);
-  width: min(420px, calc(100vw - 40px)); max-height: 86vh; overflow-y: auto;
+  width: min(420px, calc(100vw - 40px)); max-height: 86vh; overflow-y: auto; overflow-x: hidden;
   border-style: solid; border-width: 36px 20px;
   border-image: url(../assets/paper-torn.webp) 160 110 160 70 fill / 36px 22px 36px 17px stretch;
   background-color: var(--paper); background-clip: padding-box;
@@ -740,7 +740,7 @@ a { color: var(--gold-link); }
 #tam-popup .popup-alt { font-size: .9rem; margin: 14px 0 0; }
 #tam-popup .popup-alt a { color: var(--gold-link); }
 #tam-popup .popup-x {
-  position: absolute; top: -14px; right: -4px; z-index: 402;
+  position: absolute; top: -16px; right: 0; z-index: 402;
   background: none; border: 0; cursor: pointer; font-size: 1.9rem; line-height: 1;
   color: var(--ink-soft); padding: 4px 8px; font-family: 'Quicksand', sans-serif;
 }

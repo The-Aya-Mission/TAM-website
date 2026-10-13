@@ -52,7 +52,7 @@ if (evEl) {
           <h3>${esc(e.name)}</h3>
           <p>${[e.site, e.location].filter(real).map(esc).join(" · ")}</p>
           <p>${fmtRange(e.startDate, e.endDate)}${regInfo(e)}${e.spotsLeft!=null ? "<br>"+spots(e.spotsLeft) : ""}</p>
-          ${e.registration === "closed" ? "" : `<a class="btn dark" href="${APP_BASE}/apply.html?event=${encodeURIComponent(e.id)}">Apply for This Ceremony</a>`}
+          ${e.registration === "closed" ? "" : `<a class="btn dark" href="${APP_BASE}/interest.html?ceremony=${encodeURIComponent(e.id)}&ev=${encodeURIComponent(e.name)}">Register Your Interest</a>`}
         </div>`).join("")
       : `<div class="card" style="grid-column:1/-1"><h3>New Dates Coming Soon</h3>
            <p>Upcoming events are posted here as they're scheduled, along with the date applications open. Check back soon.</p></div>`;

@@ -751,7 +751,7 @@ a { color: var(--gold-link); }
   color: #e8e2d2; text-decoration: none;
   font-family: 'Quicksand', sans-serif; font-weight: 600;
   font-size: .82rem; letter-spacing: .05em; text-transform: uppercase;
-  margin: 0 16px 0 6px; white-space: nowrap;
+  margin: 0 16px 0 6px; white-space: nowrap; order: 2;
 }
 .nav-contact-link:hover { color: var(--gold); }
 @media (max-width: 1080px) { .nav-contact-link { display: none; } }
